@@ -218,8 +218,8 @@ OrionLib:MakeNotification({
 })
 wait(3)
 OrionLib:MakeNotification({
-        Name = "Awaiting reboot services...",
-        Content = "Dis injecting service and rebooting...",
+        Name = "Endpoint reserved",
+        Content = "Frame status refreshed.",
         Image = "rbxassetid://4483345998",
         Time = 5
 })
