@@ -65,13 +65,7 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
         Name = "Nameless admin",
         Callback = function()
-OrionLib:MakeNotification({
-        Name = "FE Hub Servers",
-        Content = "Your executor is not compatible with the un detected version, If you think this is bugging than this is still in debug mode and will be released soon.",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-})
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
                 print("button pressed")
         end    
 })
