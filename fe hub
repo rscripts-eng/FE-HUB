@@ -1,4 +1,3 @@
- getgenv().SecureMode = true
  loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/fe%20hub"))()
  local Window = Rayfield:CreateWindow({
    Name = "FE Hub",
