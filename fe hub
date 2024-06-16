@@ -1,247 +1,58 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "FE Hub Executor || API Injected", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-OrionLib:MakeNotification({
-        Name = "Release version 1",
-        Content = "Made by FE BOY",
-        Image = "rbxassetid://4483345998",
-        Time = 5
+ getgenv().SecureMode = true
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/fe%20hub"))()
+ local Window = Rayfield:CreateWindow({
+   Name = "FE Hub",
+   LoadingTitle = "FE Hub system",
+   LoadingSubtitle = "by bruhhhwhoasked221",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "FE Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "FE Hub Key System",
+      Subtitle = "Please initialize your local key from the local brothering community",
+      Note = "The keys are posted on the keys channel",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"FXGKKF45622BVCCCMYGRFN57WCUOPVVDDKLEXG"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
 })
-
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
-local Tab = Window:MakeTab({
-        Name = "FE hub controllers",
-        Icon = "rbxassetid://4483345998",
-        PremiumOnly = false
+local Tab = Window:CreateTab("FE Hub", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Admin services")
+local Button = Tab:CreateButton({
+   Name = "Infinite yield admin",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   -- The function that takes place when the button is pressed
+   end,
 })
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-local Section = Tab:AddSection({
-        Name = "Sector 1 FE control system"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-Tab:AddButton({
-        Name = "Infinite yield",
-        Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-                print("button pressed")
-        end    
-})
-Tab:AddButton({
-        Name = "Click to fling",
-        Callback = function()
-    OrionLib:MakeNotification({
-        Name = "Detected script",
-        Content = "We saved you, this script is not safe, this script is detected and patched, use the Nameless admin clickfling command to click fling, this script is patched at the moment.",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-})
-
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
-                print("button pressed")
-        end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-        Name = "Nameless admin",
-        Callback = function()
+local Button = Tab:CreateButton({
+   Name = "Nameless admin",
+   Callback = function()
+Rayfield:Notify({
+   Title = "Script not secured",
+   Content = "The script is known to be detected and may cause account ban, Click run anyways to run the script anyways, this will automatically cancel in 15 seconds",
+   Duration = 19.9,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Run anyways",
+         Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
-                print("button pressed")
-        end    
+         print("Script run successful FE Hub")
+      end
+   },
+},
 })
-Tab:AddButton({
-        Name = "Emotes everywhere script",
-        Callback = function()
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
-wait(2)
-OrionLib:MakeNotification({
-        Name = "Converted from client to FE",
-        Content = "This was supposed to be client, we have converted it to FE by using the animation spoofer script.",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-})
-                print("button pressed")
-        end    
-})
+   -- The function that takes place when the button is pressed
+   end,
 
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-        Name = "Hamster ball",
-        Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/xJ9gMV2E"))()
-                print("button pressed")
-        end    
 })
-Tab:AddButton({
-        Name = "FE car",
-        Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkoTubeYT/carscript/master/!carscript.lua',true))()
-                print("button pressed")
-        end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-        Name = "FE R6",
-        Callback = function()
-OrionLib:MakeNotification({
-        Name = "Script removed",
-        Content = "Local error, 404 page, we cannot find local service.",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-})
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
-                print("button pressed")
-        end    
-})
-Tab:AddButton({
-        Name = "FE Hub Executor LEGACY (Not secured)",
-        Callback = function()
-    OrionLib:MakeNotification({
-        Name = "Keep in mind",
-        Content = "This doesnt provide warnings and may put your account at risk if you insert any detected scripts, we let you prefer this one more.",
-        Image = "rbxassetid://4483345998",
-        Time = 13
-})
-
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
-loadstring(game:HttpGet("https://pastebin.com/raw/DFXFc27Z"))()
-                print("button pressed")
-        end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-local Section = Tab:AddSection({
-        Name = "FE Hub optimizer"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-Tab:AddButton({
-        Name = "Begin optimization",
-        Callback = function()
-OrionLib:MakeNotification({
-        Name = "FE Hub is optimizing...",
-        Content = "DNS services deleted, Click the Optimize button to begin true optimization",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-})
-
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
-                print("button pressed")
-        end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddSlider({
-        Name = "Frame Stablization Services",
-        Min = 10,
-        Max = 100,
-        Default = 10,
-        Color = Color3.fromRGB(255,255,255),
-        Increment = 1,
-        ValueName = "FE Hub Frame Stablization",
-        Callback = function(Value)
-                print(Value)
-        end    
-})
-
---[[
-Name = <string> - The name of the slider.
-Min = <number> - The minimal value of the slider.
-Max = <number> - The maxium value of the slider.
-Increment = <number> - How much the slider will change value when dragging.
-Default = <number> - The default value of the slider.
-ValueName = <string> - The text after the value number.
-Callback = <function> - The function of the slider.
-]]
-Tab:AddButton({
-        Name = "Full Frame optimization",
-        Callback = function()
-OrionLib:MakeNotification({
-        Name = "Preparing optimization",
-        Content = "Your hub version may reboot/reinstall if completed.",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-})
-wait(3)
-OrionLib:MakeNotification({
-        Name = "Endpoint reserved",
-        Content = "Frame status refreshed.",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-})
-wait(8.32)
-loadstring(game:HttpGet("https://controlc.com/5bf1d6d4"))()
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
-                print("button pressed")
-        end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
