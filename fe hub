@@ -24,6 +24,22 @@ local Window = Rayfield:CreateWindow({
       Key = {"YABDHTECHRE"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+Rayfield:Notify({
+   Title = "What's new?",
+   Content = "New UI Changes! and we are still re producting the scripts, and click to fling will be removed since nameless admin has it.",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay! Let me continue and i accept new agreements",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+
 local Tab = Window:CreateTab("FE Hub", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("FE Hub Admin Scripts")
 local Button = Tab:CreateButton({
