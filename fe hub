@@ -33,25 +33,3 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
    -- The function that takes place when the button is pressed
    end,
 })
-local Button = Tab:CreateButton({
-   Name = "Nameless admin",
-   Callback = function()
-Rayfield:Notify({
-   Title = "Script not secured",
-   Content = "The script is known to be detected and may cause account ban, Click run anyways to run the script anyways, this will automatically cancel in 15 seconds",
-   Duration = 19.9,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Run anyways",
-         Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
-         print("Script run successful FE Hub")
-      end
-   },
-},
-})
-   -- The function that takes place when the button is pressed
-   end,
-
-})
