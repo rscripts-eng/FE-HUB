@@ -33,3 +33,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
    -- The function that takes place when the button is pressed
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Infinite yield",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   -- The function that takes place when the button is pressed
+   end,
+})
