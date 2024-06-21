@@ -1,4 +1,3 @@
-game.Players.LocalPlayer:kick("Attachment#3/4 failed to gain keyservice 6642201 from webview, bloxy developments might be down or you are experiencing incompatible exploiting methods, aka under level 5 API")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Bloxy developments || FE Hub",
