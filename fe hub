@@ -1,6 +1,6 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "FE Hub",
+   Name = "Bloxy developments || FE Hub",
    LoadingTitle = "Bloxy developments",
    LoadingSubtitle = "FE Hub is coming your way",
    ConfigurationSaving = {
@@ -24,8 +24,8 @@ local Window = Rayfield:CreateWindow({
       Key = {"RYKDXMU61V0"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-local Tab = Window:CreateTab("FE Hub", 4483362458) -- Title, Image
-local Section = Tab:CreateSection("FE Hub Scripts")
+local Tab = Window:CreateTab("Script section", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Scripts")
 local Button = Tab:CreateButton({
    Name = "Nameless admin",
    Callback = function()
