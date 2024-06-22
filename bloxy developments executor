@@ -38,6 +38,21 @@ local title_4 = Instance.new("ImageLabel")
 
 local scriptselected = "none"
 local injected = false
+Close.Name = "Close"
+Close.Parent = bar
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.969521046, 0, 0, 0)
+Close.Size = UDim2.new(0, 21, 0, 25)
+Close.Font = Enum.Font.Arial
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 14.000
+Close.MouseButton1Click:Connect(function()
+    SynapseXreal:Destroy()
+end)
 
 --Properties:
 
@@ -106,6 +121,7 @@ Source.TextColor3 = Color3.fromRGB(204, 204, 204)
 Source.TextSize = 15.000
 Source.TextXAlignment = Enum.TextXAlignment.Left
 Source.TextYAlignment = Enum.TextYAlignment.Top
+
 
 Comments_.Name = "Comments_"
 Comments_.Parent = Source
