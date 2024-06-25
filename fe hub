@@ -1,202 +1,81 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local Window = Rayfield:CreateWindow({
-   Name = "Bloxy developments || FE Hub",
-   LoadingTitle = "Bloxy developments",
-   LoadingSubtitle = "FE Hub is coming your way",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Bloxy developments",
-      Subtitle = "Key System for FE Hub",
-      Note = "It will be sent or ask the owner for it",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"RYKDXMU61V0"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Window = Fluent:CreateWindow({
+    Title = "Bloxy developments " .. Fluent.Version,
+    SubTitle = "NEWEST VERSION OF FE HUB!",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
-local Tab = Window:CreateTab("Script section", 4483362458) -- Title, Image
-local Section = Tab:CreateSection("Scripts")
-local Button = Tab:CreateButton({
-   Name = "Nameless admin",
-   Callback = function()
+local Tabs = {
+    Main = Window:AddTab({ Title = "FE Hub", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+
+    Tabs.Main:AddButton({
+        Title = "Infinite yield reborn",
+        Description = "Runs infinite yield reborn version",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute",
+                Content = "Executing this will execute infinite yield reborn version!",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/fuckusfm/infiniteyield-reborn/master/source'))()
+                            print("Executed infinite yield reborn.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+    Fluent:Notify({
+        Title = "Cancelled",
+        Content = "You cancelled execution.",
+        SubContent = "EXEC-DECLINED", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+Tabs.Main:AddButton({
+        Title = "Nameless admin",
+        Description = "An admin script like inf yield reborn, but has quite a few trolling commands.",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute",
+                Content = "Executing this will run Nameless admin!",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Infinite yield",
-   Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Hamster ball",
-   Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/xJ9gMV2E"))()
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "FE Flips",
-   Callback = function()
-wait(5)
-
---[[ Info ]]--
-
-local ver = "2.00"
-local scriptname = "feFlip"
-
-
---[[ Keybinds ]]--
-
-local FrontflipKey = Enum.KeyCode.Z
-local BackflipKey = Enum.KeyCode.X
-local AirjumpKey = Enum.KeyCode.C
-
-
---[[ Dependencies ]]--
-
-local ca = game:GetService("ContextActionService")
-local zeezy = game:GetService("Players").LocalPlayer
-local h = 0.0174533
-local antigrav
-
-
---[[ Functions ]]--
-
-function zeezyFrontflip(act,inp,obj)
-	if inp == Enum.UserInputState.Begin then
-		zeezy.Character.Humanoid:ChangeState("Jumping")
-		wait()
-		zeezy.Character.Humanoid.Sit = true
-		for i = 1,360 do 
-			delay(i/720,function()
-			zeezy.Character.Humanoid.Sit = true
-				zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(-h,0,0)
-			end)
-		end
-		wait(0.55)
-		zeezy.Character.Humanoid.Sit = false
-	end
-end
-
-function zeezyBackflip(act,inp,obj)
-	if inp == Enum.UserInputState.Begin then
-		zeezy.Character.Humanoid:ChangeState("Jumping")
-		wait()
-		zeezy.Character.Humanoid.Sit = true
-		for i = 1,360 do
-			delay(i/720,function()
-			zeezy.Character.Humanoid.Sit = true
-				zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(h,0,0)
-			end)
-		end
-		wait(0.55)
-		zeezy.Character.Humanoid.Sit = false
-	end
-end
-
-function zeezyAirjump(act,inp,obj)
-	if inp == Enum.UserInputState.Begin then
-		zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Seated")
-		wait()
-		zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")	
-	end
-end
-
-
---[[ Binds ]]--
-
-ca:BindAction("zeezyFrontflip",zeezyFrontflip,false,FrontflipKey)
-ca:BindAction("zeezyBackflip",zeezyBackflip,false,BackflipKey)
-ca:BindAction("zeezyAirjump",zeezyAirjump,false,AirjumpKey)
-
---[[ Load Message ]]--
-
-print(scriptname .. " " .. ver .. " loaded successfully")
-print("made by Zeezy#7203")
-
-local notifSound = Instance.new("Sound",workspace)
-notifSound.PlaybackSpeed = 1.5
-notifSound.Volume = 0.15
-notifSound.SoundId = "rbxassetid://170765130"
-notifSound.PlayOnRemove = true
-notifSound:Destroy()
-game.StarterGui:SetCore("SendNotification", {Title = "Bloxy developments", Text = "FE Flip loaded successfully!", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Aimbot",
-   Callback = function()
-Rayfield:Notify({
-   Title = "Tutorial",
-   Content = "hold your M2 (rightclick area) to activate, keep holding it, it isnt toggle, and to remove  it you gotta rejoin. and also! if you changed your mind then wait 6 seconds for this to disappear. if you want to launch, go ahead click okay launch",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Okay, launch",
-         Callback = function()
-loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
-Rayfield:Notify({
-   Title = "More help",
-   Content = "infinite yield might also be recommended with this script, dont click anything to not launch it, click launch it to launch infinite yield.",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Launch it please",
-         Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-         print("The user tapped Okay!")
-      end
-   },
-},
-})
-         print("The user tapped Okay!")
-      end
-   },
-},
-})
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Section = Tab:CreateSection("FE Hub configurations")
-local Dropdown = Tab:CreateDropdown({
-   Name = "Execution mode",
-   Options = {"Normal","Reserved","Conserve debugging"},
-   CurrentOption = {"Normal"},
-   MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Option)
-Rayfield:Notify({
-   Title = "FE Hub",
-   Content = "Changes were applied to your FE Hub, if you restart FE Hub it will return to normal",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Alright.",
-         Callback = function()
-         print("The user tapped alright!")
-      end
-   },
-},
-})
-   -- The function that takes place when the selected option is changed
-   -- The variable (Option) is a table of strings for the current selected options
-   end,
-})
+                            print("Executed nameless admin.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+    Fluent:Notify({
+        Title = "Cancelled",
+        Content = "You cancelled execution.",
+        SubContent = "EXEC-DECLINED", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 
