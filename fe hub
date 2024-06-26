@@ -11,8 +11,7 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "FE Hub", Icon = "" }),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+    Main = Window:AddTab({ Title = "FE Hub", Icon = "" })
 }
 
     Tabs.Main:AddButton({
@@ -118,6 +117,9 @@ local Tabs = {
             })
         end
     })
+local Tabs = {
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
 -- Hand the library over to our managers
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
