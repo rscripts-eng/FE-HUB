@@ -78,6 +78,46 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
             })
         end
     })
+local Tabs = {
+    Main = Window:AddTab({ Title = "Anti banning", Icon = "" }),
+}
+
+    Tabs.Main:AddButton({
+        Title = "Anti ban",
+        Description = "This removes banning system from games!",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute",
+                Content = "Executing this will run our built in anti ban",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+    Fluent:Notify({
+        Title = "Executed anti ban",
+        Content = "Anti ban executed successfully.",
+        SubContent = "EXEC-ACCEPTED", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+                            print("Anti ban made by Aafak102333DIO!!!!1!!")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+    Fluent:Notify({
+        Title = "Cancelled",
+        Content = "You cancelled execution.",
+        SubContent = "EXEC-DECLINED", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 -- Hand the library over to our managers
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
