@@ -117,6 +117,40 @@ local Tabs = {
             })
         end
     })
+    Tabs.Main:AddButton({
+        Title = "FE CHAT BYPASSER",
+        Description = "Had enough of tags? go ahead and execute this",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute",
+                Content = "This will execute fe chat bypasser",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+    Fluent:Notify({
+        Title = "Cancelled",
+        Content = "You cancelled execution.",
+        SubContent = "EXEC-DECLINED", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
 local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
