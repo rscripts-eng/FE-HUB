@@ -78,7 +78,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
         end
     })
     Tabs.Main:AddButton({
-        Title = "FE CHAT BYPASSER",
+        Title = "FE CHAT BYPASSER (PC only)",
         Description = "Had enough of tags? go ahead and execute this",
         Callback = function()
             Window:Dialog({
@@ -88,6 +88,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
                     {
                         Title = "Confirm",
                         Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
                             print("Confirmed the dialog.")
                         end
