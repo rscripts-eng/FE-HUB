@@ -2,7 +2,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local Window = Fluent:CreateWindow({
-    Title = "Bloxy developments " .. Fluent.Version,
+    Title = "Bloxy developments 1.1.1",
     SubTitle = "NEWEST VERSION OF FE HUB!",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
@@ -813,6 +813,42 @@ local Tabs = {
     Tabs.Main:AddButton({
         Title = "Anti ban",
         Description = "This removes banning system from games!",
+        Callback = function()
+            Window:Dialog({
+                Title = "Execute",
+                Content = "Executing this will run our built in anti ban",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+    Fluent:Notify({
+        Title = "Executed anti ban",
+        Content = "Anti ban executed successfully.",
+        SubContent = "EXEC-ACCEPTED", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+                            print("Anti ban made by Aafak102333DIO!!!!1!!")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+    Fluent:Notify({
+        Title = "Cancelled",
+        Content = "You cancelled execution.",
+        SubContent = "EXEC-DECLINED", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.Main:AddButton({
+        Title = "Spoil moderation",
+        Description = "This spoils the service, by adding too many scripts, aka half of the moderation powers may focus with the scripts",
         Callback = function()
             Window:Dialog({
                 Title = "Execute",
