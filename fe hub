@@ -16,7 +16,7 @@ local Tabs = {
    Fluent:Notify({
         Title = "What's new?",
         Content = "Updated width style and added anti banning method, by blocking detected scripts, aka patched scripts",
-        SubContent = "SubContent", -- Optional
+        SubContent = "UPDATE-MSG", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
 
@@ -98,7 +98,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
    Fluent:Notify({
         Title = "Patched",
         Content = "This bypasser is detected, cannot be Executed and BLOCKED by our system, once it recieves an update it will be unpatched.",
-        SubContent = "SubContent", -- Optional
+        SubContent = "EXEC-ACCESS-DENIED", -- Optional
         Duration = 10 -- Set to nil to make the notification not disappear
     })
 
