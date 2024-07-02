@@ -25,12 +25,11 @@ local Window = Rayfield:CreateWindow({
    }
 })
 local Tab = Window:CreateTab("FE Hub", 4483362458) -- Title, Image
-local Label = Tab:CreateLabel("Console: Hello world!")
+local Label = Tab:CreateLabel("Console: No frequency/stable connection between scripts, either being reworked or down.")
 local Button = Tab:CreateButton({
    Name = "Infinite yield",
    Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/fuckusfm/infiniteyield-reborn/master/source'))()
-Label:Set("Console: Activated loadstring using RAW GITHUB way, Secured check.")
    -- The function that takes place when the button is pressed
    end,
 })
@@ -38,7 +37,6 @@ local Button = Tab:CreateButton({
    Name = "Nameless admin",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
-Label:Set("Console: Activated loadstring using HTTPS getway, Secured check.")
    -- The function that takes place when the button is pressed
    end,
 })
@@ -469,7 +467,6 @@ espFirst()
             })
         end
     })
-Label:Set("Console: Activated LUA Program using .LUA file format, Secured check.")
    -- The function that takes place when the button is pressed
    end,
 })
