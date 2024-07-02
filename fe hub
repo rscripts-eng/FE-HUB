@@ -1,140 +1,81 @@
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-local Window = Fluent:CreateWindow({
-    Title = "Bloxy developments 1.1.1",
-    SubTitle = "NEWEST VERSION OF FE HUB!",
-    TabWidth = 190,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Light",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "FE Hub VERSION 1.1.2",
+   LoadingTitle = "FE Hub",
+   LoadingSubtitle = "Bloxy developments made this!!! Bootstrapper is from rayfield.",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = Config Execution, -- Create a custom folder for your hub/game
+      FileName = "EXECUTIVE_COMMANDS"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"response1FE"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
 })
-local Tabs = {
-    Main = Window:AddTab({ Title = "FE Hub", Icon = "" })
-}
-   Fluent:Notify({
-        Title = "What's new?",
-        Content = "Updated width style and added anti banning method, by blocking detected scripts, aka patched scripts",
-        SubContent = "UPDATE-MSG", -- Optional
-        Duration = 10 -- Set to nil to make the notification not disappear
-    })
-
-
-    Tabs.Main:AddButton({
-        Title = "Infinite yield reborn",
-        Description = "Runs infinite yield reborn version",
-        Callback = function()
-            Window:Dialog({
-                Title = "Execute",
-                Content = "Executing this will execute infinite yield reborn version!",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
+local Tab = Window:CreateTab("FE Panels", 4483362458) -- Title, Image
+Rayfield:Notify({
+   Title = "What's new?",
+   Content = "Old hub returned.",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "OK",
+         Callback = function()
+         print("The user tapped OK")
+      end
+   },
+},
+})
+local Button = Tab:CreateButton({
+   Name = "Infinite yield Reborn",
+   Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/fuckusfm/infiniteyield-reborn/master/source'))()
-                            print("Executed infinite yield reborn.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-    Fluent:Notify({
-        Title = "Cancelled",
-        Content = "You cancelled execution.",
-        SubContent = "EXEC-DECLINED", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
-
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-Tabs.Main:AddButton({
-        Title = "Nameless admin",
-        Description = "An admin script like inf yield reborn, but has quite a few trolling commands.",
-        Callback = function()
-            Window:Dialog({
-                Title = "Execute",
-                Content = "Executing this will run Nameless admin!",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Nameless admin",
+   Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
-                            print("Executed nameless admin.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-    Fluent:Notify({
-        Title = "Cancelled",
-        Content = "You cancelled execution.",
-        SubContent = "EXEC-DECLINED", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-    Tabs.Main:AddButton({
-        Title = "FE CHAT BYPASSER (PC only)",
-        Description = "Had enough of tags? go ahead and execute this",
-        Callback = function()
-            Window:Dialog({
-                Title = "Execute",
-                Content = "This will execute fe chat bypasser",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-   Fluent:Notify({
-        Title = "Patched",
-        Content = "This bypasser is detected, cannot be Executed and BLOCKED by our system, once it recieves an update it will be unpatched.",
-        SubContent = "EXEC-ACCESS-DENIED", -- Optional
-        Duration = 10 -- Set to nil to make the notification not disappear
-    })
-
-
-                            print("Confirmed the dialog.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-    Fluent:Notify({
-        Title = "Cancelled",
-        Content = "You cancelled execution.",
-        SubContent = "EXEC-DECLINED", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-    Tabs.Main:AddButton({
-        Title = "MM2 ESP and speed hacking (PC only)",
-        Description = "Tired of getting a little bit too unknown? want to find who the murder is immediately? try this!",
-        Callback = function()
-            Window:Dialog({
-                Title = "Execute",
-                Content = "Executing this will execute MM2 ESP and speed hacking",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
---All credit goes to the maker i think it is the best esp and just wanted to make more people use it
-
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "FE Chat bypasser (closes this hub tho)",
+   Callback = function()
+Rayfield:Notify({
+   Title = "Patched",
+   Content = "Requirements of this script is currently patched at the moment, try again when recieves an update",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Stop process",
+         Callback = function()
+         print("Stopped process")
+      end
+   },
+},
+})
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "MM2 Esp and speed hacking",
+   Callback = function()
 local uis = game:GetService("UserInputService")
 local sg = game:GetService("StarterGui")
 local wp = game:GetService("Workspace")
@@ -560,17 +501,12 @@ espFirst()
         end
     })
 
-    Tabs.Main:AddButton({
-        Title = "FE Aimbot",
-        Description = "Kind of 100% accuracy",
-        Callback = function()
-            Window:Dialog({
-                Title = "Execute",
-                Content = "By executing this you will execute aimbot, this will have access to your camera, Modify",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "FE Aimbot",
+   Callback = function()
 PLAYER  = game.Players.LocalPlayer
 MOUSE   = PLAYER:GetMouse()
 CC      = game.Workspace.CurrentCamera
@@ -799,122 +735,6 @@ game:GetService('RunService').RenderStepped:connect(function()
 	end
 end)
  
-repeat
-	wait()
-	if ESP_ENABLED == true then
-		FIND()
-	end
-until ESP_ENABLED == false
-                            print("Confirmed the dialog.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-
-local Tabs = {
-    Main = Window:AddTab({ Title = "Anti banning", Icon = "" }),
-}
-
-    Tabs.Main:AddButton({
-        Title = "Anti ban",
-        Description = "This removes banning system from games!",
-        Callback = function()
-            Window:Dialog({
-                Title = "Execute",
-                Content = "Executing this will run our built in anti ban",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-    Fluent:Notify({
-        Title = "Executed anti ban",
-        Content = "Anti ban executed successfully.",
-        SubContent = "EXEC-ACCEPTED", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
-                            print("Anti ban made by Aafak102333DIO!!!!1!!")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-    Fluent:Notify({
-        Title = "Cancelled",
-        Content = "You cancelled execution.",
-        SubContent = "EXEC-DECLINED", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-    Tabs.Main:AddButton({
-        Title = "Spoil moderation",
-        Description = "This spoils the service, by adding too many scripts, aka half of the moderation powers may focus with the scripts",
-        Callback = function()
-            Window:Dialog({
-                Title = "Execute",
-                Content = "Executing this will run our built in anti ban",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-    Fluent:Notify({
-        Title = "Executed anti ban",
-        Content = "Anti ban executed successfully.",
-        SubContent = "EXEC-ACCEPTED", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
-                            print("Anti ban made by Aafak102333DIO!!!!1!!")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-    Fluent:Notify({
-        Title = "Cancelled",
-        Content = "You cancelled execution.",
-        SubContent = "EXEC-DECLINED", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-
-local Tabs = {
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
-}
--- Hand the library over to our managers
-SaveManager:SetLibrary(Fluent)
-InterfaceManager:SetLibrary(Fluent)
-
--- Ignore keys that are used by ThemeManager.
--- (we dont want configs to save themes, do we?)
-SaveManager:IgnoreThemeSettings()
-
--- You can add indexes of elements the save manager should ignore
-SaveManager:SetIgnoreIndexes({})
-
--- use case for doing it this way:
--- a script hub could have themes in a global folder
--- and game configs in a separate folder per game
-InterfaceManager:SetFolder("FluentScriptHub")
-SaveManager:SetFolder("FluentScriptHub/specific-game")
-
-InterfaceManager:BuildInterfaceSection(Tabs.Settings)
-SaveManager:BuildConfigSection(Tabs.Settings)
+   -- The function that takes place when the button is pressed
+   end,
+})
