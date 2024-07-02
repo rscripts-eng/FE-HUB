@@ -25,6 +25,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+local Label = Tab:CreateLabel("FE Hub has been updated to RAYFIELD UI! that means the key system is gone temporarily.")
 local Button = Tab:CreateButton({
    Name = "Infinite yield",
    Callback = function()
