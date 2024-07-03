@@ -96,31 +96,3 @@ local Tabs = {
         Multi = false,
         Default = 2,
     })
-local Tabs = {
-    Main = Window:AddTab({ Title = "Anti ban", Icon = "" })
-}
-
-    Tabs.Main:AddButton({
-        Title = "Anti ban",
-        Description = "Removes 20% of ur ban chances",
-        Callback = function()
-            Window:Dialog({
-                Title = "Coming soon",
-                Content = "Getting a revamp",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-                            print("Confirmed the dialog.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
