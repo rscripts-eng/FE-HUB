@@ -19,7 +19,7 @@ local Tabs = {
         Callback = function()
             Window:Dialog({
                 Title = "Are you sure?",
-                Content = "",
+                Content = "VERIFIED AND PROTECTED",
                 Buttons = {
                     {
                         Title = "Confirm",
@@ -96,4 +96,31 @@ local Tabs = {
         Values = {"LUA", "UNC (Recommended)", "Reserved (YBC)"},
         Multi = false,
         Default = 2,
+    })
+local Tabs = {
+    Main = Window:AddTab({ Title = "RBX ANTI BAN", Icon = "" })
+}
+   Tabs.Main:AddButton({
+        Title = "Button",
+        Description = "Very important button",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure?",
+                Content = "VERIFIED AND PROTECTED",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
     })
