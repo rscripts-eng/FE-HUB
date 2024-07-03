@@ -466,3 +466,65 @@ espFirst()
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
+local Tab = Window:MakeTab({
+	Name = "Anti ban",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddButton({
+	Name = "Anti ban",
+	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Anti ban success",
+	Content = "Execution successful.",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+Tab:AddSlider({
+	Name = "Anti ban level",
+	Min = 3,
+	Max = 7,
+	Default = 3,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Anti ban level",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+--[[
+Name = <string> - The name of the slider.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
+]]
+Tab:AddLabel("Level 3 = 2% chance removed")
+Tab:AddLabel("Level 4 = 6% chance removed")
+Tab:AddLabel("Level 5 = 14% chance removed")
+Tab:AddLabel("Level 6 = 18% chance removed")
+Tab:AddLabel("Level 7 = 20% chance removed")
