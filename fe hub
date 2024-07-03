@@ -88,3 +88,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
             })
         end
     })
+    local Slider = Tabs.Main:AddSlider("Slider", {
+        Title = "Walkspeed",
+        Description = "This adjusts your walkspeed!",
+        Default = 16,
+        Min = 0,
+        Max = 900,
+        Rounding = 1,
+        Callback = function(Value)
+game.Workspace.Players.LocalPlayer.Character.Humanoid.Walkspeed = value
+            print("Slider was changed:", Value)
+        end
+    })
