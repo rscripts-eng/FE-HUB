@@ -92,5 +92,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
         Title = "Dropdown",
         Values = {"LUA", "UNC", "Reserved (YBC)"},
         Multi = false,
-        Default = 1,
+        Default = 2,
     })
