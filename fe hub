@@ -102,10 +102,10 @@ local Tabs = {
    Tabs.Main:AddButton({
         Title = "Anti ban",
         Description = "Removes 20% chance of getting banned",
-        Callback = function()
             Window:Dialog({
                 Title = "Are you sure?",
                 Content = "FE HUB REWORKED SYSTEM VERIFIED",
+         Callback = function()
                 Buttons = {
                     {
                         Title = "Confirm",
