@@ -457,18 +457,6 @@ end)
 
 espFirst()
                             print("Confirmed the dialog.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
 
       		print("button pressed")
   	end    
