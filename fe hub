@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local Window = Fluent:CreateWindow({
     Title = "FE Hub REWORKED 1.1.2 ",
-    SubTitle = "Presented by bloxy developments, Reworked in the year 2024",
+    SubTitle = "Reworked by me!!",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -90,7 +90,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
     })
     local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
         Title = "Dropdown",
-        Values = {"LUA", "UNC", "Reserved (YBC)"},
+        Values = {"LUA", "UNC (Recommended)", "Reserved (YBC)"},
         Multi = false,
         Default = 2,
     })
