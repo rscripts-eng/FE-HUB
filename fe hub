@@ -49,6 +49,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/fuckusfm/infiniteyiel
                     {
                         Title = "Confirm",
                         Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
                             print("Confirmed the dialog.")
                         end
                     },
