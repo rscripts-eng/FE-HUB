@@ -523,8 +523,8 @@ Default = <number> - The default value of the slider.
 ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
-Tab:AddLabel("Level 3 = 2% chance removed")
-Tab:AddLabel("Level 4 = 6% chance removed")
-Tab:AddLabel("Level 5 = 14% chance removed")
-Tab:AddLabel("Level 6 = 18% chance removed")
-Tab:AddLabel("Level 7 = 20% chance removed")
+Tab:AddLabel("Level 3 = 2%")
+Tab:AddLabel("Level 4 = 6%")
+Tab:AddLabel("Level 5 = 14%")
+Tab:AddLabel("Level 6 = 18%")
+Tab:AddLabel("Level 7 = 20%")
