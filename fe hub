@@ -66,8 +66,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
    Tabs.Main:AddButton({
         Title = "MM2 ESP and speed hacking",
         Description = "Win every game with this",
-        Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/FE%20hub%20mm2%20esp"))()
             Window:Dialog({
                 Title = "Are you sure?",
                 Content = "",
@@ -75,6 +73,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
                     {
                         Title = "Confirm",
                         Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/FE%20hub%20mm2%20esp"))()
                             print("Confirmed the dialog.")
                         end
                     },
