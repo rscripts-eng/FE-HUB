@@ -96,7 +96,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
         Max = 900,
         Rounding = 1,
         Callback = function(Value)
-game.Workspace.Players.LocalPlayer.Character.Humanoid.Walkspeed = value
+game.Workspace.Players.LocalPlayer.Character.Humanoid.Walkspeed = Value
             print("Slider was changed:", Value)
         end
     })
