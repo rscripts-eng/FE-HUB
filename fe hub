@@ -105,7 +105,6 @@ local Tabs = {
             Window:Dialog({
                 Title = "Are you sure?",
                 Content = "FE HUB REWORKED SYSTEM VERIFIED",
-         Callback = function()
                 Buttons = {
                     {
                         Title = "Confirm",
