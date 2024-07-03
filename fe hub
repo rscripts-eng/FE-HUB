@@ -88,6 +88,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
             })
         end
     })
+local Tabs = {
+    Main = Window:AddTab({ Title = "Execution Type", Icon = "" })
+}
     local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
         Title = "Dropdown",
         Values = {"LUA", "UNC (Recommended)", "Reserved (YBC)"},
