@@ -97,26 +97,21 @@ local Tabs = {
         Default = 2,
     })
 local Tabs = {
-    Main = Window:AddTab({ Title = "RBX ANTI BAN", Icon = "" })
+    Main = Window:AddTab({ Title = "Anti ban", Icon = "" })
 }
-   Tabs.Main:AddButton({
+
+    Tabs.Main:AddButton({
         Title = "Anti ban",
-        Description = "Removes 20% chance of getting banned",
+        Description = "Removes 20% of ur ban chances",
+        Callback = function()
             Window:Dialog({
-                Title = "Are you sure?",
-                Content = "FE HUB REWORKED SYSTEM VERIFIED",
+                Title = "Coming soon",
+                Content = "Getting a revamp",
                 Buttons = {
                     {
                         Title = "Confirm",
                         Callback = function()
-   Fluent:Notify({
-        Title = "Task System",
-        Content = "Executed anti ban successfully",
-        SubContent = "", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
                             print("Confirmed the dialog.")
-                            print("Anti ban made by FE Hub REWORKED!")
                         end
                     },
                     {
