@@ -19,7 +19,7 @@ local Tabs = {
         Callback = function()
             Window:Dialog({
                 Title = "Are you sure?",
-                Content = "VERIFIED AND PROTECTED",
+                Content = "",
                 Buttons = {
                     {
                         Title = "Confirm",
@@ -106,7 +106,7 @@ local Tabs = {
         Callback = function()
             Window:Dialog({
                 Title = "Are you sure?",
-                Content = "VERIFIED AND PROTECTED",
+                Content = "FE HUB REWORKED SYSTEM VERIFIED",
                 Buttons = {
                     {
                         Title = "Confirm",
@@ -114,7 +114,7 @@ local Tabs = {
    Fluent:Notify({
         Title = "Task System",
         Content = "Executed anti ban successfully",
-        SubContent = "SubContent", -- Optional
+        SubContent = "", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
     })
                             print("Confirmed the dialog.")
