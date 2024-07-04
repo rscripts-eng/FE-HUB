@@ -231,7 +231,7 @@ local UniversalScripts = {
 		Colour = Color3.fromRGB(0, 170, 127),
 	},
 	ESP = {
-		Name = "Team ESP and speed hacking [Doesnt work in most games]",
+		Name = "Team ESP [mm2 recommended]",
 		Author = "FE Hub",
 		Loadstring = "https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",
 		Colour = Color3.fromRGB(179, 97, 42),
