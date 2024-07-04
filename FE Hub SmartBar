@@ -242,7 +242,12 @@ local UniversalScripts = {
 		Loadstring = "https://pastebin.com/raw/fPP8bZ8Z",
 		Colour = Color3.fromRGB(120, 170, 160),
 	},
-
+        antiban = {
+		Name = "Anti ban",
+		Author = "FE Hub",
+		Loadstring = "https://pastebin.com/raw/gsxvWvnj",
+		Colour = Color3.fromRGB(120, 170, 160),
+	},
 }
 
 local DetectionScripts = {
