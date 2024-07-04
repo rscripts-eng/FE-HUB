@@ -88,7 +88,7 @@ end
 local Domain = game:GetObjects("rbxassetid://7924540022")[1]
 
 if DebugMode then
-	warn("DomainX - Loaded Main UI")
+	warn("DomainX API credits - Loaded Main UI")
 end
 
 local protected = false
@@ -218,21 +218,21 @@ local UniversalScripts = {
 		Loadstring = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",
 		Colour = Color3.fromRGB(57, 57, 57),
 	},
-	SiriusUni = {
-		Name = "Sirius Universal",
-		Author = "Sirius",
-		Loadstring = "https://raw.githubusercontent.com/shlexware/Sirius/request/game/Universal",
+	Nameless = {
+		Name = "Nameless admin UNDETECTED",
+		Author = "Main author unknown, undetected script is from FE Hub",
+		Loadstring = "https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source",
 		Colour = Color3.fromRGB(188, 57, 59),
 	},
-	SimpleSpy = {
-		Name = "SimpleSpy",
-		Author = "exx",
-		Loadstring = "https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua",
+	Bypasser = {
+		Name = "FE Chat bypasser [Click twice!]",
+		Author = "V3RG",
+		Loadstring = "https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader",
 		Colour = Color3.fromRGB(0, 170, 127),
 	},
-	cmdx = {
-		Name = "CMD-X",
-		Author = "Various Developers",
+	ESP = {
+		Name = "Team ESP and speed hacking [Doesnt work in most games]",
+		Author = "FE Hub",
 		Loadstring = "https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",
 		Colour = Color3.fromRGB(179, 97, 42),
 	},
