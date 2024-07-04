@@ -133,11 +133,11 @@ local KeyWaitTime = 60
 local MlemixMode = false
 
 
-local Release = 1.96
+local Release = 1.97
 local KeySystemEnabled = false
 local ReleaseType = "Release"
-local Public = true
-local Beta = false
+local Public = false
+local Beta = true
 
 
 
@@ -3856,7 +3856,7 @@ function ContinueBoot()
 		Toast("Successfully upgraded license","GothamBlack")
 	end
 
-	Toast("Welcome to FE Hub quick menu this version is:"..Release.. ", "..LocalPlayer.DisplayName,"GothamBold")
+	Toast("Welcome to FE Hub quick menu this version is: "..Release.. ", "..LocalPlayer.DisplayName,"GothamBold")
 
 	--if protected then
 	--	if Client ~= "Universal" then
