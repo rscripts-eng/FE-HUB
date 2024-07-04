@@ -474,9 +474,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
   	end    
 })
 Tab:AddButton({
-	Name = "FE Hub Domain X [quick menu]",
+	Name = "Domain X [Opens Quick menu and closes the hub]",
 	Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+wait(1)
+OrionLib:Destroy()
       		print("button pressed")
   	end    
 })
