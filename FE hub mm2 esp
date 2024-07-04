@@ -1,3 +1,5 @@
+--All credit goes to the maker i think it is the best esp and just wanted to make more people use it
+
 local uis = game:GetService("UserInputService")
 local sg = game:GetService("StarterGui")
 local wp = game:GetService("Workspace")
@@ -409,16 +411,3 @@ mouse.KeyDown:connect(function(keyDown)
 end)
 
 espFirst()
-                            print("Confirmed the dialog.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
