@@ -488,10 +488,17 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
   	end    
 })
 Tab:AddButton({
-	Name = "Domain X [Opens Quick menu and closes the hub]",
+	Name = "FE Hub smartbar [Opens Quick menu and closes this gui]",
 	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Anti ban executed automatically",
+	Content = "Anti ban executed automatically before closing, executed at level 8, the hub is closing in 4 seconds.",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+wait(4)
 OrionLib:Destroy()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/FE%20Hub%20SmartBar"))()
       		print("button pressed")
   	end    
 })
