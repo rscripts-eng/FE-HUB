@@ -21,7 +21,33 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "Infinite yield Reborn",
 	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/fuckusfm/infiniteyield-reborn/master/source'))()
+OrionLib:MakeNotification({
+	Name = "Callback error",
+	Content = "Local netspace.goto command invalid position,",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+OrionLib:MakeNotification({
+	Name = "Local error",
+	Content = "Content Attempt to parent to "ScreenGUI" failed because the parent doesnt have a valid API",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
       		print("button pressed")
   	end    
 })
@@ -476,9 +502,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
 Tab:AddButton({
 	Name = "Domain X [Opens Quick menu and closes the hub]",
 	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
-wait(1)
 OrionLib:Destroy()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
       		print("button pressed")
   	end    
 })
