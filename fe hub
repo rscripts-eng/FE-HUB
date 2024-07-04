@@ -3856,7 +3856,7 @@ function ContinueBoot()
 		Toast("Successfully upgraded license","GothamBlack")
 	end
 
-	Toast("Welcome to FE Hub quick menu this version is: "..Release.. ", "..LocalPlayer.DisplayName,"GothamBold")
+	Toast("Welcome to FE Hub! We are proud to have you, the local version is... is: "..Release.. ", "..LocalPlayer.DisplayName,"GothamBold")
 
 	--if protected then
 	--	if Client ~= "Universal" then
