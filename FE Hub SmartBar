@@ -4943,8 +4943,7 @@ end)()
 
 coroutine.wrap(function()
 	wait(1000)
-	Toast("Enjoying FE Hub quick menu? Thats great!")
-	Toast(DiscordLink,"GothamBold")
+	Toast("Enjoying FE Hub quick menu? That's fantastic to us!")
 end)()
 
 while true do
