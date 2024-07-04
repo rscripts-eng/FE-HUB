@@ -466,6 +466,18 @@ espFirst()
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
+Tab:AddButton({
+	Name = "FE Chat bypasser [click twice]",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 local Tab = Window:MakeTab({
 	Name = "Anti ban",
 	Icon = "rbxassetid://4483345998",
@@ -520,7 +532,7 @@ Min = <number> - The minimal value of the slider.
 Max = <number> - The maxium value of the slider.
 Increment = <number> - How much the slider will change value when dragging.
 Default = <number> - The default value of the slider.
-ValueName = <string> - The text after the value number.
+ValueName = <stwring> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
 Tab:AddLabel("Level 3 = 2%")
