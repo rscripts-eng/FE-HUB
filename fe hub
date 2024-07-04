@@ -233,7 +233,7 @@ local UniversalScripts = {
 	ESP = {
 		Name = "Team ESP [mm2 recommended]",
 		Author = "FE Hub",
-		Loadstring = "https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",
+		Loadstring = "https://pastebin.com/raw/iwNkj0EW",
 		Colour = Color3.fromRGB(179, 97, 42),
 	},
 	Dex = {
