@@ -473,7 +473,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
       		print("button pressed")
   	end    
 })
+Tab:AddButton({
+	Name = "FE Hub Domain X [quick menu]",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+      		print("button pressed")
+  	end    
+})
 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 --[[
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
