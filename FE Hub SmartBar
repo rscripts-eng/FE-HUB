@@ -121,7 +121,7 @@ Domain.Main.KeybindNote.Visible = true
 Domain.Main.KeybindNote.TextTransparency = 0.4
 wait(0.2)
 
-local DefaultKeybind = "K"
+local DefaultKeybind = "P"
 local DiscordLink = "discord.gg/sirius"
 local DiscordLink2 = "sirius"
 local NotificationDuration = 7
