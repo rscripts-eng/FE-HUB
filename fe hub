@@ -19,20 +19,9 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 Tab:AddButton({
-	Name = "Infinite yield Reborn",
+	Name = "Infinite yield",
 	Callback = function()
-OrionLib:MakeNotification({
-	Name = "Callback error",
-	Content = "Local netspace.goto command invalid position,",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-OrionLib:MakeNotification({
-	Name = "Local error",
-	Content = "Content Attempt to parent to "ScreenGUI" failed because the parent doesnt have a valid API",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 
 --[[
 Title = <string> - The title of the notification.
@@ -40,7 +29,6 @@ Content = <string> - The content of the notification.
 Image = <string> - The icon of the notification.
 Time = <number> - The duration of the notfication.
 ]]
-})
 
 --[[
 Title = <string> - The title of the notification.
@@ -554,7 +542,7 @@ Callback = <function> - The function of the button.
 Tab:AddSlider({
 	Name = "Anti ban level",
 	Min = 3,
-	Max = 7,
+	Max = 8,
 	Default = 3,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
@@ -578,3 +566,4 @@ Tab:AddLabel("Level 4 = 6%")
 Tab:AddLabel("Level 5 = 14%")
 Tab:AddLabel("Level 6 = 18%")
 Tab:AddLabel("Level 7 = 20%")
+Tab:AddLabel("Level 8 = 26%")
