@@ -65,7 +65,7 @@ for _, ui in ipairs(game:GetService("CoreGui"):GetChildren()) do
 end
 
 if DebugMode then
-	warn("DomainX - Protected KeyUI")
+	warn("System - Protected KeyUI")
 end
 
 local http_request = http_request;
@@ -88,7 +88,7 @@ end
 local Domain = game:GetObjects("rbxassetid://7924540022")[1]
 
 if DebugMode then
-	warn("DomainX API credits - Loaded Main UI")
+	warn("DomainX API - Loaded Main UI")
 end
 
 local protected = false
@@ -133,11 +133,11 @@ local KeyWaitTime = 60
 local MlemixMode = false
 
 
-local Release = 1.97
+local Release = 1.98
 local KeySystemEnabled = false
 local ReleaseType = "Release"
-local Public = false
-local Beta = true
+local Public = true
+local Beta = false
 
 
 
@@ -299,7 +299,7 @@ local DetectionScripts = {
 		Name = "Identity Fraud",
 		Description = "This script is a community submitted script, we have no info on it",
 		Games = {338521019},
-		Premium = false,
+		Premium = true,
 		Loadstring = "https://raw.githubusercontent.com/tkorra/Identity_Fraud/main/main.lua",
 	},
 	CriticalStrike = {
@@ -362,7 +362,7 @@ local DetectionScripts = {
 		Name = "Demon Slayer RPG 2",
 		Description = "This script is a community submitted script, we have no info on it",
 		Games = {4734949248},
-		Premium = false,
+		Premium = true,
 		Loadstring = "https://raw.githubusercontent.com/HDTerebi/DSRPG2/master/Shitty%20GUI.lua",
 	},
 	NDS = {
