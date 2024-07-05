@@ -248,6 +248,12 @@ local UniversalScripts = {
 		Loadstring = "https://pastebin.com/raw/gsxvWvnj",
 		Colour = Color3.fromRGB(120, 170, 160),
 	},
+        aimbot = {
+		Name = "Aimbot",
+		Author = "FE Hub",
+		Loadstring = "https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt",
+		Colour = Color3.fromRGB(120, 200, 160),
+	},
 }
 
 local DetectionScripts = {
