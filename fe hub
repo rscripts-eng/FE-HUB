@@ -126,7 +126,7 @@ local KeyWaitTime = 60
 local MlemixMode = false
 
 
-local Release = 1.99
+local Release = 2.00
 local KeySystemEnabled = false
 local ReleaseType = "Release"
 local Public = true
@@ -243,7 +243,7 @@ local UniversalScripts = {
 	},
         aimbot = {
 		Name = "Aimbot",
-		Author = "FE Hub",
+		Author = "WRD Exploiting",
 		Loadstring = "https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt",
 		Colour = Color3.fromRGB(120, 200, 160),
 	},
@@ -684,7 +684,7 @@ function AttachToPlayer(Player)
 			HumanoidRootPart.CFrame = PlHumanoidRootPart.CFrame
 		until (Tool.Parent ~= Character or not HumanoidRootPart or not PlHumanoidRootPart or not HumanoidRootPart.Parent or not PlHumanoidRootPart.Parent or n > 250) and n > 2
 	else
-		Toast("You need a tool to perform this action on "..Player.Name) 
+		Toast("You need atleast a tool to use the command kill on "..Player.Name) 
 	end
 end
 
