@@ -3081,8 +3081,16 @@ local function C_49()
 			task.wait(1)
 			title.Text = "Brothering X - "..synversion
 		else
-			title.Text = "Brothering X - "..synversion.." (already injected!)"
+			title.Text = "Brothering X - "..synversion.." (Rebooting...)"
 			task.wait(1)
+			title.Text = "Brothering X - "..synversion.." (Re-Attaching API...)"
+                        printidentity()
+			task.wait(8.4)
+			title.Text = "Brothering X - "..synversion.." (Rebooting byfron bypass...)"
+			task.wait(3.2)
+			title.Text = "Brothering X - "..synversion.." (Making sure that its attached...)"
+			task.wait(1.3)
+			title.Text = "Brothering X - "..synversion.." (ready!)"
 			title.Text = "Brothering X - "..synversion
 		end
 	end)
