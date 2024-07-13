@@ -1,6 +1,6 @@
 -- Brothering X Remake made by me! martin
 
-local synversion = "2.26B"
+local synversion = "2.27B"
 
 -- this shit function makes my script fucked
 --[[pcall(function()
@@ -3071,9 +3071,9 @@ local function C_49()
 			task.wait(0.8)
 			title.Text = "Brothering X - "..synversion.." (Attaching API...)"
                         printidentity()
-			task.wait(8.4)
+			task.wait(6.2)
 			title.Text = "Brothering X - "..synversion.." (Bypassing byfron...)"
-			task.wait(3.2)
+			task.wait(4.2)
 			title.Text = "Brothering X - "..synversion.." (Making sure that its attached...)"
 			task.wait(1.3)
 			title.Text = "Brothering X - "..synversion.." (ready!)"
@@ -3084,13 +3084,16 @@ local function C_49()
 			title.Text = "Brothering X - "..synversion.." (Rebooting...)"
 			task.wait(1)
 			title.Text = "Brothering X - "..synversion.." (Re-Attaching API...)"
+                        injected = false
                         printidentity()
-			task.wait(8.4)
+			task.wait(7.4)
 			title.Text = "Brothering X - "..synversion.." (Rebooting byfron bypass...)"
-			task.wait(3.2)
+			task.wait(5.7)
 			title.Text = "Brothering X - "..synversion.." (Making sure that its attached...)"
 			task.wait(1.3)
 			title.Text = "Brothering X - "..synversion.." (ready!)"
+                        injected = true
+                        task.wait(1)
 			title.Text = "Brothering X - "..synversion
 		end
 	end)
