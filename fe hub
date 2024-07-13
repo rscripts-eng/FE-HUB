@@ -1,7 +1,7 @@
 getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "FE Hub Beta",
+   Name = "FE Hub Beta 1.1",
    LoadingTitle = "FE Hub Beta",
    LoadingSubtitle = "Initializing Hub...",
    ConfigurationSaving = {
@@ -61,6 +61,11 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
    Name = "Our brothering X internal executor (Includes synapse x ui)",
    Callback = function()
+   Label:Set("Console: Attempting to launch internal API...")
+   wait(4)
+   Label:Set("Console: Making sure its the newest version...")
+   wait(0.47)
+   Label:Set("Console: Ran Brothering X executor! we made it by the way!")
    loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Brothering%20X%20Internal",true))()
    -- The function that takes place when the button is pressed
    end,
