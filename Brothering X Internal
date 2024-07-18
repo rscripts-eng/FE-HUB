@@ -1,7 +1,7 @@
 -- Brothering X Remake made by me! credits to chillz for the remake and synapse x ui
 game.StarterGui:SetCore("SendNotification", {
     Title = "Brothering X 2.28D";
-    Text = "Attempting to load applicanes...";
+    Text = "Getting local GUI...";
     Icon = "";
     Duration = 13;
 })
@@ -3077,7 +3077,7 @@ local function C_49()
 			task.wait(0.8)
 			title.Text = "Brothering X - "..synversion.." (Attaching API...)"
                         printidentity()
-			task.wait(4.7)
+			task.wait(6.3)
 			title.Text = "Brothering X - "..synversion.." (Bypassing byfron...)"
 			task.wait(4.2)
 			title.Text = "Brothering X - "..synversion.." (Making sure that its attached...)"
@@ -3097,7 +3097,7 @@ local function C_49()
 			task.wait(5.7)
 			title.Text = "Brothering X - "..synversion.." (Making sure that its attached...)"
 			task.wait(1.3)
-			title.Text = "Brothering X - "..synversion.." (ready!)"
+			title.Text = "Brothering X - "..synversion.." (Ready!)"
                         injected = true
                         task.wait(1)
 			title.Text = "Brothering X - "..synversion
