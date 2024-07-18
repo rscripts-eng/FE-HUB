@@ -1,12 +1,12 @@
 -- Brothering X Remake made by me! martin
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Brothering X";
+    Title = "Brothering X 2.28D";
     Text = "Attempting to load applicanes...";
     Icon = "";
     Duration = 13;
 })
 wait(13.4)
-local synversion = "2.27B"
+local synversion = "2.28D"
 
 -- this shit function makes my script fucked
 --[[pcall(function()
