@@ -65,7 +65,7 @@ local Button = Tab:CreateButton({
    wait(4)
    Label:Set("Console: Making sure its the newest version...")
    wait(0.47)
-   Label:Set("Console: Ran Brothering X executor! we made it by the way!")
+   Label:Set("Console: Ran Brothering X executor! we made it by the way! we recommend using the PC version.")
    loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Brothering%20X%20Internal",true))()
    -- The function that takes place when the button is pressed
    end,
