@@ -3078,13 +3078,8 @@ local function C_49()
 			title.Text = "Brothering X - "..synversion.." (Attaching API...)"
                         printidentity()
 			task.wait(6.3)
-			title.Text = "Brothering X - "..synversion.." (Bypassing byfron...)"
-			task.wait(4.2)
-			title.Text = "Brothering X - "..synversion.." (Making sure that its attached...)"
-			task.wait(1.3)
-			title.Text = "Brothering X - "..synversion.." (Ready!)"
-			injected = true
-			task.wait(1)
+			title.Text = "Brothering X - "..synversion.." (Failed to attach: PATCHED_EXPLOIT got triggered!)"
+			task.wait(4)
 			title.Text = "Brothering X - "..synversion
 		else
 			title.Text = "Brothering X - "..synversion.." (Rebooting...)"
@@ -3093,12 +3088,7 @@ local function C_49()
                         injected = false
                         printidentity()
 			task.wait(7.4)
-			title.Text = "Brothering X - "..synversion.." (Rebooting byfron bypass...)"
-			task.wait(5.7)
-			title.Text = "Brothering X - "..synversion.." (Making sure that its attached...)"
-			task.wait(1.3)
-			title.Text = "Brothering X - "..synversion.." (Ready!)"
-                        injected = true
+			title.Text = "Brothering X - "..synversion.." (Failed to attach: PATCHED_EXPLOIT got triggered!)"
                         task.wait(1)
 			title.Text = "Brothering X - "..synversion
 		end
