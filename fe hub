@@ -1,7 +1,7 @@
 getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "FE Hub Beta 1.2",
+   Name = "FE Hub Beta 1.3",
    LoadingTitle = "FE Hub Beta",
    LoadingSubtitle = "Initializing Hub...",
    ConfigurationSaving = {
@@ -85,5 +85,35 @@ Label:Set("Console: Changing animations...")
 wait(0.56)
 Label:Set("Console: Ran FE R6!")
    -- The function that takes place when the button is pressed
+   end,
+})
+local Tab = Window:CreateTab("Debugging", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Debugging servers")
+local Label = Tab:CreateLabel("Debug console: Start debugging by choosing a level down there!")
+local Slider = Tab:CreateSlider({
+   Name = "Debugging level",
+   Range = {0, 100},
+   Increment = 5,
+   Suffix = "Debugging level",
+   CurrentValue = 5,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   Label:Set("Debugging console: Debugging as level " ..Value)
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Run as script program",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+       print("Running script program as Executable LUA Folder")
+       wait(1)
+       print("Running script program as LSLFLALWLT.EXE")
+       printidentity("Local server identification code of local executor is")
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
    end,
 })
