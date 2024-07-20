@@ -1,119 +1,116 @@
-getgenv().SecureMode = true
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local Window = Rayfield:CreateWindow({
-   Name = "FE Hub Beta 1.3",
-   LoadingTitle = "FE Hub Beta",
-   LoadingSubtitle = "Initializing Hub...",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "FE Hub",
-      Subtitle = "Key System",
-      Note = "This is a beta version and must atleast have a key for this to access!",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"RMDBETA"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Window = Fluent:CreateWindow({
+    Title = "Fluent " .. Fluent.Version,
+    SubTitle = "by dawid",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Light",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
-local Tab = Window:CreateTab("Scripts", 4483362458) -- Title, Image
-local Section = Tab:CreateSection("Scripts")
-local Label = Tab:CreateLabel("Console: Hello World!")
-local Button = Tab:CreateButton({
-   Name = "Infinite yield",
-   Callback = function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-   Label:Set("Console: Ran Infinite yield!")
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Nameless admin",
-   Callback = function()
-   Rayfield:Notify({
-   Title = "Not safe...",
-   Content = "This script has been set to (danger) Wait 6.5 seconds for the message to disappear to decline, to run anyways click the button",
-   Duration = 6.5,
-   Image = 4483362458,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Run anyways",
-         Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
-         Label:Set("Console: Ran Nameless admin!")
-         print("Exception Occured")
-      end
-   },
-},
-})
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Our brothering X internal executor (Includes synapse x ui)",
-   Callback = function()
-   Label:Set("Console: Attempting to launch internal API...")
-   wait(4)
-   Label:Set("Console: Making sure its the newest version...")
-   wait(0.47)
-   Label:Set("Console: Ran Brothering X executor! we made it by the way! we recommend using the PC version.")
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Brothering%20X%20Internal",true))()
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "MM2 ESP",
-   Callback = function()
-   Label:Set("Console: Attempt to call nil value, Reason: patched rn srry")
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "FE R6",
-   Callback = function()
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+    Tabs.Main:AddButton({
+        Title = "Infinite yield",
+        Description = "Infinite yield! an admin script used from many exploiters, very useful for starters",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure you want to execute this? keep in mind malware attacks either steals passwords or accounts!",
+                Content = "",
+                Buttons = {
+                    {
+                        Title = "Yes",
+                        Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "No",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.Main:AddButton({
+        Title = "Nameless admin",
+        Description = "Nameless admin, the professional solara supported admin script! has many scripts, more than infinite yield! some unique, some trolling, and much more in this script!",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure you want to execute this? keep in mind malware attacks either steals passwords or accounts!",
+                Content = "",
+                Buttons = {
+                    {
+                        Title = "Yes",
+                        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "No",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.Main:AddButton({
+        Title = "FE R6",
+        Description = "Unsupported games? cant be r6? this script changes your animation to r6! keep in mind u will still be r6, only animation changes",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure you want to execute this? keep in mind malware attacks either steals passwords or accounts!",
+                Content = "",
+                Buttons = {
+                    {
+                        Title = "Yes",
+                        Callback = function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
-Label:Set("Console: Changing animations...")
-wait(0.56)
-Label:Set("Console: Ran FE R6!")
-   -- The function that takes place when the button is pressed
-   end,
-})
-local Tab = Window:CreateTab("Debugging", 4483362458) -- Title, Image
-local Section = Tab:CreateSection("Debugging servers")
-local Label = Tab:CreateLabel("Debug console: Start debugging by choosing a level down there!")
-local Slider = Tab:CreateSlider({
-   Name = "Debugging level",
-   Range = {0, 100},
-   Increment = 5,
-   Suffix = "Debugging level",
-   CurrentValue = 5,
-   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   Label:Set("Debugging console: Debugging as level " ..Value)
-   -- The function that takes place when the slider changes
-   -- The variable (Value) is a number which correlates to the value the slider is currently at
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Run as script program",
-   CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-       print("Running script program as Executable LUA Folder")
-       wait(1)
-       print("Running script program as LSLFLALWLT.EXE")
-       printidentity("Local server identification code of local executor is")
-   -- The function that takes place when the toggle is pressed
-   -- The variable (Value) is a boolean on whether the toggle is true or false
-   end,
-})
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "No",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.Main:AddButton({
+        Title = "MM2 esp UNPATCHED VERSION",
+        Description = "With the help of the biggest creator, fe hub managed to bypass byfron's esp detection",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure you want to execute this? keep in mind malware attacks either steals passwords or accounts!",
+                Content = "",
+                Buttons = {
+                    {
+                        Title = "Yes",
+                        Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "No",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
