@@ -1,12 +1,12 @@
 -- Brothering X Remake made by me! credits to chillz for the remake and synapse x ui
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Brothering X 2.29D";
+    Title = "Brothering X 2.30B";
     Text = "Getting local GUI...";
     Icon = "";
     Duration = 13;
 })
 wait(13.4)
-local synversion = "2.29D"
+local synversion = "2.30B"
 
 -- this actually doesnt do that much heko, might not even help lol
 --[[pcall(function()
