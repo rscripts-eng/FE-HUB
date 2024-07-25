@@ -1,8 +1,9 @@
+local Release = "1.15"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local Window = Fluent:CreateWindow({
-    Title = "FE Hub " .. Fluent.Version,
+    Title = "FE Hub " ..Release,
     SubTitle = "by bloxy developments",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
@@ -44,7 +45,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
         Description = "Nameless admin, the professional solara supported admin script! has many scripts, more than infinite yield! some unique, some trolling, and much more in this script!",
         Callback = function()
             Window:Dialog({
-                Title = "Are you sure you want to execute this? keep in mind malware attacks either steals passwords or accounts!",
+                Title = "Are you sure?",
                 Content = "",
                 Buttons = {
                     {
@@ -69,7 +70,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
         Description = "Unsupported games? cant be r6? this script changes your animation to r6! keep in mind u will still be r6, only animation changes",
         Callback = function()
             Window:Dialog({
-                Title = "Are you sure you want to execute this? keep in mind malware attacks either steals passwords or accounts!",
+                Title = "Are you sure?",
                 Content = "",
                 Buttons = {
                     {
@@ -94,7 +95,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for
         Description = "With the help of the biggest creator, fe hub managed to bypass byfron's esp detection",
         Callback = function()
             Window:Dialog({
-                Title = "Are you sure you want to execute this? keep in mind malware attacks either steals passwords or accounts!",
+                Title = "Are you sure?",
                 Content = "",
                 Buttons = {
                     {
@@ -513,6 +514,31 @@ mouse.KeyDown:connect(function(keyDown)
 end)
 
 espFirst()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "No",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.Main:AddButton({
+        Title = "[NEW] Chat bypasser",
+        Description = "Newest version",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure?",
+                Content = "This is a dialog",
+                Buttons = {
+                    {
+                        Title = "Yes",
+                        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LSB4KRS/main/Loader"))()
                             print("Confirmed the dialog.")
                         end
                     },
