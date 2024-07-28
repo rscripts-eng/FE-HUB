@@ -3,9 +3,9 @@ game.StarterGui:SetCore("SendNotification", {
     Title = "Serpas X 2.31C";
     Text = "Getting local GUI...";
     Icon = "";
-    Duration = 13;
+    Duration = 7;
 })
-wait(13.4)
+wait(8)
 local synversion = "2.31C"
 
 -- this actually doesnt do that much heko, might not even help lol
