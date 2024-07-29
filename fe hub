@@ -1,4 +1,4 @@
-local Release = "1.15"
+local Release = "1.16"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -20,13 +20,18 @@ local Tabs = {
         Description = "Infinite yield! an admin script used from many exploiters, very useful for starters",
         Callback = function()
             Window:Dialog({
-                Title = "Are you sure you want to execute this? keep in mind malware attacks either steals passwords or accounts!",
+                Title = "Are you sure?",
                 Content = "",
                 Buttons = {
                     {
                         Title = "Yes",
                         Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    Fluent:Notify({
+        Title = "Notification",
+        Content = "Unsupported for now",
+        SubContent = "Reason: Byfron", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
                             print("Confirmed the dialog.")
                         end
                     },
@@ -51,7 +56,12 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
                     {
                         Title = "Yes",
                         Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+    Fluent:Notify({
+        Title = "Notification",
+        Content = "Unsupported for now",
+        SubContent = "Reason: Byfron", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
                             print("Confirmed the dialog.")
                         end
                     },
@@ -552,3 +562,39 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
             })
         end
     })
+-- Addons:
+-- SaveManager (Allows you to have a configuration system)
+-- InterfaceManager (Allows you to have a interface managment system)
+
+-- Hand the library over to our managers
+InterfaceManager:SetLibrary(Fluent)
+
+-- Ignore keys that are used by ThemeManager.
+-- (we dont want configs to save themes, do we?)
+
+
+-- You can add indexes of elements the save manager should ignore
+
+-- use case for doing it this way:
+-- a script hub could have themes in a global folder
+-- and game configs in a separate folder per game
+InterfaceManager:SetFolder("FluentScriptHub")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+
+
+Window:SelectTab(1)
+
+Fluent:Notify({
+    Title = "FE Hub",
+    Content = "Config loaded",
+    Duration = 8
+})
+Fluent:Notify({
+    Title = "FE Hub",
+    Content = "Defender for script detection loaded",
+    Duration = 8
+})
+-- You can use the SaveManager:LoadAutoloadConfig() to load a config
+-- which has been marked to be one that auto loads!
+SaveManager:LoadAutoloadConfig()
