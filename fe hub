@@ -1,4 +1,4 @@
-local Release = "1.16"
+local Release = "1.17"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -26,12 +26,7 @@ local Tabs = {
                     {
                         Title = "Yes",
                         Callback = function()
-    Fluent:Notify({
-        Title = "Notification",
-        Content = "Unsupported for now",
-        SubContent = "Reason: Byfron", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
                             print("Confirmed the dialog.")
                         end
                     },
@@ -56,12 +51,7 @@ local Tabs = {
                     {
                         Title = "Yes",
                         Callback = function()
-    Fluent:Notify({
-        Title = "Notification",
-        Content = "Unsupported for now",
-        SubContent = "Reason: Byfron", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
                             print("Confirmed the dialog.")
                         end
                     },
