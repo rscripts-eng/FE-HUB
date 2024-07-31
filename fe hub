@@ -528,7 +528,7 @@ espFirst()
         end
     })
     Tabs.Main:AddButton({
-        Title = "[NEW] Chat bypasser",
+        Title = "Chat bypasser",
         Description = "Newest version",
         Callback = function()
             Window:Dialog({
@@ -553,7 +553,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
         end
     })
     Tabs.Main:AddButton({
-        Title = "Hamster ball",
+        Title = "[NEW] Hamster ball",
         Description = "Wanna be a hamster? sure!",
         Callback = function()
             Window:Dialog({
@@ -561,7 +561,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
                 Content = "",
                 Buttons = {
                     {
-                        Title = "Confirm",
+                        Title = "Yes",
                         Callback = function()
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
@@ -627,7 +627,7 @@ humanoid.Died:Connect(function() tc:Disconnect() end)
                         end
                     },
                     {
-                        Title = "Cancel",
+                        Title = "No",
                         Callback = function()
                             print("Cancelled the dialog.")
                         end
@@ -637,7 +637,7 @@ humanoid.Died:Connect(function() tc:Disconnect() end)
         end
     })
     Tabs.Main:AddButton({
-        Title = "FE Flips",
+        Title = "[NEW] FE Flips",
         Description = "Wanna do cool tricks? here!",
         Callback = function()
             Window:Dialog({
@@ -645,14 +645,14 @@ humanoid.Died:Connect(function() tc:Disconnect() end)
                 Content = "",
                 Buttons = {
                     {
-                        Title = "Confirm",
+                        Title = "Yes",
                         Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/fe%20flips",true))()
                             print("Confirmed the dialog.")
                         end
                     },
                     {
-                        Title = "Cancel",
+                        Title = "No",
                         Callback = function()
                             print("Cancelled the dialog.")
                         end
