@@ -533,7 +533,7 @@ espFirst()
         Callback = function()
             Window:Dialog({
                 Title = "Are you sure?",
-                Content = "This is a dialog",
+                Content = "Execute twice!",
                 Buttons = {
                     {
                         Title = "Yes",
@@ -623,6 +623,31 @@ end)
  
 Camera.CameraSubject = ball
 humanoid.Died:Connect(function() tc:Disconnect() end)
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.Main:AddButton({
+        Title = "FE Flips",
+        Description = "Wanna do cool tricks? here!",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure?",
+                Content = "",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/fe%20flips",true))()
                             print("Confirmed the dialog.")
                         end
                     },
