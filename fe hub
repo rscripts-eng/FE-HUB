@@ -694,6 +694,8 @@ Fluent:Notify({
     Content = "Defender for script detection loaded",
     Duration = 8
 })
+wait(0.60)
+game.Players.LocalPlayer:kick("Client defender sync FAILURE!")
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
 -- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
