@@ -92,7 +92,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for
     })
     Tabs.Main:AddButton({
         Title = "MM2 esp UNPATCHED VERSION",
-        Description = "With the help of the biggest creator, Cyber X managed to bypass byfron's esp detection",
+        Description = "With the help of the biggest creator, Jujutsu X managed to bypass byfron's esp detection",
         Callback = function()
             Window:Dialog({
                 Title = "Are you sure?",
@@ -661,6 +661,35 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
             })
         end
     })
+local Tabs = {
+    Main = Window:AddTab({ Title = "Our scripts", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+    Tabs.Main:AddButton({
+        Title = "Jujutsu X Admin",
+        Description = "Infinite yield powered (credits to them)",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure?",
+                Content = "This is officially from us",
+                Buttons = {
+                    {
+                        Title = "Yes",
+                        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Cyber%20X%20Admin%20(Infinite%20yield%20powered)",true))()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "No",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 -- Addons:
 -- SaveManager (Allows you to have a configuration system)
 -- InterfaceManager (Allows you to have a interface managment system)
@@ -685,18 +714,18 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "Cyber X",
+    Title = "Jujutsu X",
     Content = "Config loaded",
     Duration = 8
 })
 Fluent:Notify({
-    Title = "Cyber X",
+    Title = "Jujutsu X",
     Content = "Defender for script detection loaded",
     Duration = 8
 })
 wait(0.60)
 Fluent:Notify({
-    Title = "Cyber X",
+    Title = "Jujutsu X",
     Content = "Defender sync successful, Bypassed ver: 2959-1649",
     Duration = 8
 })
