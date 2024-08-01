@@ -12594,7 +12594,6 @@ task.spawn(function()
 
 	if success then
 		if currentVersion ~= latestVersionInfo.Version then
-			notify('Dont worry! not outdated rn')
 		end
 
 		if latestVersionInfo.Announcement and latestVersionInfo.Announcement ~= '' then
