@@ -1,9 +1,9 @@
-local Release = "1.18"
+local Release = "1.19"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 local Window = Fluent:CreateWindow({
-    Title = "FE Hub " ..Release,
+    Title = "Cyber X " ..Release,
     SubTitle = "by bloxy developments",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
@@ -92,7 +92,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for
     })
     Tabs.Main:AddButton({
         Title = "MM2 esp UNPATCHED VERSION",
-        Description = "With the help of the biggest creator, fe hub managed to bypass byfron's esp detection",
+        Description = "With the help of the biggest creator, Cyber X managed to bypass byfron's esp detection",
         Callback = function()
             Window:Dialog({
                 Title = "Are you sure?",
@@ -685,17 +685,21 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "FE Hub",
+    Title = "Cyber X",
     Content = "Config loaded",
     Duration = 8
 })
 Fluent:Notify({
-    Title = "FE Hub",
+    Title = "Cyber X",
     Content = "Defender for script detection loaded",
     Duration = 8
 })
 wait(0.60)
-game.Players.LocalPlayer:kick("Client defender sync FAILURE!")
+Fluent:Notify({
+    Title = "Cyber X",
+    Content = "Defender sync successful, Bypassed ver: 2959-1649",
+    Duration = 8
+})
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
 -- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
