@@ -728,8 +728,6 @@ Fluent:Notify({
     Content = "Defender sync successful, Bypassed ver: 8832-4563",
     Duration = 8
 })
-wait(0.47)
-game.Players.LocalPlayer:kick("Client sync ERROR!")
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
 -- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
