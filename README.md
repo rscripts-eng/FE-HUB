@@ -1,3 +1,5 @@
+script: loadstring(game:HttpGet("https://bit.ly/FE-HUB",true))()
+
 # Welcome to a Hub named jujutsu X!
 our old name was supposed to be FE Hub, but now, we are jujutsu X, we have alot of scripts that nearly all executors support! this includes infinite yield, nameless admin, jujutsu X admin (infinite yield powered)
 ## What we do:
