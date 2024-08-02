@@ -725,7 +725,7 @@ Fluent:Notify({
 wait(0.60)
 Fluent:Notify({
     Title = "Jujutsu X",
-    Content = "Defender sync successful, Bypassed ver: 8832-4563",
+    Content = "Defender sync successful, Bypassed ver: 520-763",
     Duration = 8
 })
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
