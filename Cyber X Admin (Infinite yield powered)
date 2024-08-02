@@ -1,5 +1,5 @@
 if IY_LOADED and not _G.IY_DEBUG == true then
-    -- error("Cyber X is already running!", 0)
+ error("INFYIELD API is already running!", 0)
     return
 end
 
@@ -17,7 +17,7 @@ if not game:IsLoaded() then
     notLoaded:Destroy()
 end
 
-currentVersion = "Version 6.3"
+currentVersion = "V6.4"
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
