@@ -661,12 +661,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
         end
     })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Change logs", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
-    Tabs.Main:AddParagraph({
-        Title = "Newest change logs",
-        Content = "First thing is that jujutsu admin is no longer here, second of all new defender bypass authentication"
-    })
+}
 -- Addons:
 -- SaveManager (Allows you to have a configuration system)
 -- InterfaceManager (Allows you to have a interface managment system)
