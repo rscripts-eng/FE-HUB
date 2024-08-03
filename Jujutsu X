@@ -1,4 +1,5 @@
 local Release = "1.21"
+local bypass = "520-736"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -32,6 +33,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
                     {
                         Title = "No",
                         Callback = function()
+                        error("Defender exception "..bypass)
                             print("Cancelled the dialog.")
                         end
                     }
@@ -57,6 +59,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/Name
                     {
                         Title = "No",
                         Callback = function()
+                        error("Defender exception "..bypass)
                             print("Cancelled the dialog.")
                         end
                     }
@@ -82,6 +85,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for
                     {
                         Title = "No",
                         Callback = function()
+                        error("Defender exception "..bypass)
                             print("Cancelled the dialog.")
                         end
                     }
@@ -519,6 +523,7 @@ espFirst()
                     {
                         Title = "No",
                         Callback = function()
+                        error("Defender exception "..bypass)
                             print("Cancelled the dialog.")
                         end
                     }
@@ -532,7 +537,7 @@ espFirst()
         Callback = function()
             Window:Dialog({
                 Title = "Are you sure?",
-                Content = "Execute twice!",
+                Content = "Execute twice for it to actually work",
                 Buttons = {
                     {
                         Title = "Yes",
@@ -544,6 +549,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
                     {
                         Title = "No",
                         Callback = function()
+                        error("Defender exception "..bypass)
                             print("Cancelled the dialog.")
                         end
                     }
@@ -628,6 +634,7 @@ humanoid.Died:Connect(function() tc:Disconnect() end)
                     {
                         Title = "No",
                         Callback = function()
+                        error("Defender exception "..bypass)
                             print("Cancelled the dialog.")
                         end
                     }
@@ -653,6 +660,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
                     {
                         Title = "No",
                         Callback = function()
+                        error("Defender exception "..bypass)
                             print("Cancelled the dialog.")
                         end
                     }
@@ -699,7 +707,7 @@ Fluent:Notify({
 wait(0.98)
 Fluent:Notify({
     Title = "Jujutsu X",
-    Content = "Defender sync successful, Bypassed ver: 520-763",
+    Content = "Defender sync successful, Bypassed ver: "..bypass,
     Duration = 8
 })
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
