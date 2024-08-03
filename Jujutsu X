@@ -1,4 +1,4 @@
-local Release = "1.20"
+local Release = "1.21"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -718,11 +718,11 @@ Fluent:Notify({
     Duration = 8
 })
 Fluent:Notify({
-    Title = "Jujutsu X",
+    Title = "Jujutsu X (Working in background)",
     Content = "Defender for script detection loaded",
     Duration = 8
 })
-wait(0.60)
+wait(0.98)
 Fluent:Notify({
     Title = "Jujutsu X",
     Content = "Defender sync successful, Bypassed ver: 520-763",
