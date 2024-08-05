@@ -1,5 +1,5 @@
-local Release = "1.21"
-local bypass = "520-736"
+local Release = "1.22"
+local bypass = "879-610"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -704,10 +704,10 @@ Fluent:Notify({
     Content = "Defender for script detection loaded",
     Duration = 8
 })
-wait(0.98)
+wait(0.78)
 Fluent:Notify({
     Title = "Jujutsu X",
-    Content = "Defender sync successful, Bypassed ver: "..bypass,
+    Content = "Defender sync bypass ROM successful, Bypassed ver: "..bypass,
     Duration = 8
 })
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
