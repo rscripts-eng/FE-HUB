@@ -1,0 +1,16 @@
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local keyToPress = Enum.KeyCode.E -- Change this to the key you want to use
+
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if input.KeyCode == keyToPress and not gameProcessed then
+        wait(0.98) -- Wait for 2 seconds before sending the first message
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Polarising light", "All")
+        wait(1.6) -- Wait for 2 seconds before sending the next message
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Graves of the red", "All")
+        wait(2) -- Wait for 2 seconds before sending the last message
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hollow purple", "All")
+    end
+end)
