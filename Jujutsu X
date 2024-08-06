@@ -668,6 +668,33 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
             })
         end
     })
+    Tabs.Main:AddButton({
+        Title = "[NEW TSB] Gojo quotes",
+        Description = "Very important button",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure",
+                Content = "This is officialy made by us!",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Hollow%20purple%20texts",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Reversal%20RED",true))()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
 local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
@@ -704,7 +731,7 @@ Fluent:Notify({
     Content = "Defender for script detection loaded",
     Duration = 8
 })
-wait(0.78)
+wait(0.93)
 Fluent:Notify({
     Title = "Jujutsu X",
     Content = "Defender sync bypass ROM successful, Bypassed ver: "..bypass,
