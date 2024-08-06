@@ -1,0 +1,11 @@
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local keyToPress = Enum.KeyCode.R -- Change this to the key you want to use
+
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if input.KeyCode == keyToPress and not gameProcessed then
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Reversal red....", "All")
+ end
+end)
