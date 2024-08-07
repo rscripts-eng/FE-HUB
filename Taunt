@@ -1,0 +1,15 @@
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local keyToPress = Enum.KeyCode.T -- Change this to the key you want to use
+
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if input.KeyCode == keyToPress and not gameProcessed then
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Do you really think you can bypass my infinity?", "All")
+        wait(0.63) -- Wait for 2 seconds before sending the next message
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Kind of funny! but you can try", "All")
+        wait(0.63) -- Wait for 2 seconds before sending the last message
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Nah i'd win.", "All")
+    end
+end)
