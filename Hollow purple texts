@@ -1,12 +1,12 @@
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Guide V1";
-    Text = "Go to TSB and click the gojo moveset, then make sure to use 2 + R in the same time, this means the quote for reveral red, then 3 + E will give the";
+    Title = "Guide V1.5";
+    Text = "Keybinds: Gojo moveset: 3 + E = Hollow purple quotes, 2 + R = Reversal technique";
     Icon = "";
     Duration = 20;
 })
 game.StarterGui:SetCore("SendNotification", {
     Title = "Guide";
-    Text = "Hollow purple";
+    Text = "Uhhh, open source aswell but mostly updated here";
     Icon = "";
     Duration = 20;
 })
