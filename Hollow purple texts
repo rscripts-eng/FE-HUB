@@ -6,7 +6,7 @@ game.StarterGui:SetCore("SendNotification", {
 })
 game.StarterGui:SetCore("SendNotification", {
     Title = "Guide";
-    Text = "Uhhh, open source aswell but mostly updated here";
+    Text = "Clicking T only is going to make gojo's taunt";
     Icon = "";
     Duration = 20;
 })
