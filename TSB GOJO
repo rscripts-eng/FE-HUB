@@ -1,0 +1,2 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Hollow%20purple%20texts",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Reversal%20RED",true))()
