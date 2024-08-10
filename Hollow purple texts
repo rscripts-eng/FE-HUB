@@ -1,5 +1,5 @@
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Guide V1.5";
+    Title = "Guide V2";
     Text = "Keybinds: Gojo moveset: 3 + E = Hollow purple quotes, 2 + R = Reversal technique";
     Icon = "";
     Duration = 20;
