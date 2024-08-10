@@ -1,5 +1,5 @@
-local Release = "1.22"
-local bypass = "879-610"
+local Release = "1.23"
+local bypass = "231-706"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -679,8 +679,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
                     {
                         Title = "Confirm",
                         Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Hollow%20purple%20texts",true))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/Reversal%20RED",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/TSB%20GOJO",true))()
                             print("Confirmed the dialog.")
                         end
                     },
