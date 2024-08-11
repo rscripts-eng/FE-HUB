@@ -1,5 +1,5 @@
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Guide V2";
+    Title = "Guide V2.1";
     Text = "Keybinds: Gojo moveset: 3 + E = Hollow purple quotes, 2 + R = Reversal technique";
     Icon = "";
     Duration = 20;
@@ -19,10 +19,12 @@ local keyToPress = Enum.KeyCode.E -- Change this to the key you want to use
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if input.KeyCode == keyToPress and not gameProcessed then
         wait(0.98) -- Wait for 2 seconds before sending the first message
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Polarising light", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Imaginary technique; Blue", "All")
         wait(1.6) -- Wait for 2 seconds before sending the next message
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Graves of the red", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Imaginary technique; Red", "All")
         wait(2) -- Wait for 2 seconds before sending the last message
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hollow purple", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hollow....", "All")
+        wait(1.7)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("PURPLE.. evade this....", "All")
     end
 end)
