@@ -6,6 +6,8 @@ local keyToPress = Enum.KeyCode.R -- Change this to the key you want to use
 
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if input.KeyCode == keyToPress and not gameProcessed then
-        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Reversal technique; Red...", "All")
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Reversal technique; Repulse...", "All")
+        wait(0.79)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Heh...", "All")
  end
 end)
