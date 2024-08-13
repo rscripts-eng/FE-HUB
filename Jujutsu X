@@ -1,13 +1,14 @@
 print("Connecting to client")
 warn("Server Setup CRC.API webSocket started, Awaiting package extraction")
+warn("Updater detection, Awaiting package extraction")
 print("Extracting...")
-wait(8)
+wait(3.7)
 print("Attempting to get Defender API...")
-wait(14)
+wait(13.6)
 print("Defender API Got API Token, Entered as correct Token")
 print("Starting up Script...")
-local Release = "1.23"
-local bypass = "231-706"
+local Release = "1.24"
+local bypass = "720-886"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -566,7 +567,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BakaPraselol/MRCBV4LS
         end
     })
     Tabs.Main:AddButton({
-        Title = "[NEW] Hamster ball",
+        Title = "Hamster ball",
         Description = "Wanna be a hamster? sure!",
         Callback = function()
             Window:Dialog({
@@ -651,7 +652,7 @@ humanoid.Died:Connect(function() tc:Disconnect() end)
         end
     })
     Tabs.Main:AddButton({
-        Title = "[NEW] FE Flips",
+        Title = "FE Flips",
         Description = "Wanna do cool tricks? here!",
         Callback = function()
             Window:Dialog({
@@ -678,22 +679,23 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
     })
     Tabs.Main:AddButton({
         Title = "[NEW TSB] Gojo quotes",
-        Description = "Very important button",
+        Description = "Quotes for gojo",
         Callback = function()
             Window:Dialog({
                 Title = "Are you sure",
                 Content = "This is officialy made by us!",
                 Buttons = {
                     {
-                        Title = "Confirm",
+                        Title = "Yes",
                         Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/main/TSB%20GOJO",true))()
                             print("Confirmed the dialog.")
                         end
                     },
                     {
-                        Title = "Cancel",
+                        Title = "No",
                         Callback = function()
+                        error("Defender exception "..bypass)
                             print("Cancelled the dialog.")
                         end
                     }
@@ -701,6 +703,33 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rscripts-eng/FE-HUB/m
             })
         end
     })
+    Tabs.Main:AddButton({
+        Title = "[NEW] Aimbot",
+        Description = "Aimbot that bypasses roblox!",
+        Callback = function()
+            Window:Dialog({
+                Title = "Are you sure?",
+                Content = "",
+                Buttons = {
+                    {
+                        Title = "Yes",
+                        Callback = function()
+loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "No",
+                        Callback = function()
+                        error("Defender exception "..bypass)
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
 
 local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
