@@ -768,7 +768,6 @@ Fluent:Notify({
     Duration = 8
 })
 wait(0.93)
-game.Players.LocalPlayer.kick("Currently not updated")
 Fluent:Notify({
     Title = "Jujutsu X",
     Content = "Defender sync bypass ROM successful, Bypassed ver: "..bypass,
