@@ -1,3 +1,4 @@
+game.Players.LocalPlayer:kick("Lets get this straight: We are updating to a new defender type, with undetection and more, Thank you Message directed from jujutsu X")
 print("Connecting to client")
 warn("Server Setup CRC.API webSocket started, Awaiting package extraction")
 warn("Updater detection, Awaiting package extraction")
