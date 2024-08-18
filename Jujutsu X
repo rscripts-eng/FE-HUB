@@ -1,15 +1,14 @@
-game.Players.LocalPlayer:kick("Lets get this straight: We are updating our defender and much more, our estimated time is: Monday 11:28 AM")
 print("Connecting to client")
 warn("Server Setup CRC.API webSocket started, Awaiting package extraction")
 warn("Updater detection, Awaiting package extraction")
 print("Extracting...")
-wait(3.7)
+wait(6.9)
 print("Attempting to get Defender API...")
-wait(13.6)
+wait(14.6)
 print("Defender API Got API Token, Entered as correct Token")
 print("Starting up Script...")
-local Release = "1.24"
-local bypass = "960-110"
+local Release = "1.25"
+local bypass = "LIVE"
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
