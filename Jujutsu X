@@ -1,11 +1,13 @@
-print("Connecting to client")
-warn("Server Setup CRC.API webSocket started, Awaiting package extraction")
-warn("Updater detection, Awaiting package extraction")
+print("Connecting to Server...")
+wait(0.61)
+warn("Server Setup LIVE_JUJUTSUX.HTTP web get detect, Awaiting package extraction")
+warn("Key got token API, expected extraction at the moment")
 print("Extracting...")
 wait(6.9)
-print("Attempting to get Defender API...")
+local token = "5nCM4CM6xx48MGAL"
+print("Getting API token...")
 wait(14.6)
-print("Defender API Got API Token, Entered as correct Token")
+print("DO NOT SHARE YOUR TOKEN TO ANYONE! Token number: "..token)
 print("Starting up Script...")
 local Release = "1.25"
 local bypass = "LIVE"
