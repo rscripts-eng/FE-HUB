@@ -4,7 +4,6 @@ warn("Server Setup LIVE_JUJUTSUX.HTTP web get detect, Awaiting package extractio
 warn("Key got token API, expected extraction at the moment")
 print("Extracting...")
 wait(6.9)
-game.Players.LocalPlayer:kick("Management failure; Build not found! Error code: SEVERE PATCH")
 local token = "5nCM4CM6xx48MGAL"
 print("Getting API token...")
 wait(14.6)
