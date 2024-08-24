@@ -4,12 +4,13 @@ warn("Server Setup LIVE_JUJUTSUX.HTTP web get detect, Awaiting package extractio
 warn("Key got token API, expected extraction at the moment")
 print("Extracting...")
 wait(6.9)
-local token = "5nCM4CM6xx48MGAL"
-local token2 = "MMM.MMM.MMM.MMM"
-local exectype = "BRLLS39VM3014"
+local token = "B4M32R6Vm4KX5mf"
+local secret = "MMM.MMM.MMM.MMM"
+local exectype = "BRLLS39VM009"
 print("Getting API token...")
 wait(14.6)
 print("DO NOT SHARE YOUR TOKEN TO ANYONE! Token number: "..token)
+print("DONT SHARE Secret number: "..secret)
 print("Starting up Script...")
 local Release = "1.25"
 local bypass = "LIVE"
