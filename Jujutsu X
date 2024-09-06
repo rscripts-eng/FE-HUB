@@ -93,12 +93,18 @@ local Button = Tab:CreateButton({
    Image = 4483362458,
    Actions = { -- Notification Buttons
       Ignore = {
-         Name = "I understand, Launch script",
+         Name = "Launch",
          Callback = function()
    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
          print("The user tapped Okay!")
       end
    },
+    Accept = {
+        Name = "Cancel",
+        Callback = function()
+        print("Okay")
+       end
+    },
 },
 })
    -- The function that takes place when the button is pressed
