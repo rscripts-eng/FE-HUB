@@ -6,7 +6,7 @@ print("Extracting...")
 wait(4.9)
 local token = "B4M32R6Vm4KX5mf"
 local secret = "MMM.MMM.MMM.MMM"
-local exectype = "BRLLS39VM009"
+local exectype = "IDENTIY"
 print("Getting API token...")
 wait(1.60)
 print("DO NOT SHARE YOUR TOKEN TO ANYONE! Token number: "..token)
