@@ -16,7 +16,7 @@ local Release = "1.26"
 local bypass = "LIVE"
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "Jujutsu X V: "..Release,
+   Name = "Stella di mare V: "..Release,
    LoadingTitle = "Jujutsu X!",
    LoadingSubtitle = "Made by Stereo developments!",
    ConfigurationSaving = {
@@ -31,7 +31,7 @@ local Window = Rayfield:CreateWindow({
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Jujutsu X Beta system",
+      Title = "Stella di mare Beta System",
       Subtitle = "Key System for the new beta rework",
       Note = "No method of obtaining the key is provided",
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
@@ -43,8 +43,8 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("Main")
 Rayfield:Notify({
-   Title = "WARNING",
-   Content = "Always remember to use an alt account for this, if you use your main it could lead you to BAN",
+   Title = "Welcome",
+   Content = "Welcome to stella di mare, Always use an alt to avoid bans!",
    Duration = 6.5,
    Image = 4483362458,
    Actions = { -- Notification Buttons
@@ -92,14 +92,14 @@ local Button = Tab:CreateButton({
    Duration = 6.5,
    Image = 4483362458,
    Actions = { -- Notification Buttons
-      Ignore = {
+      Accept = {
          Name = "Launch",
          Callback = function()
    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
          print("The user tapped Okay!")
       end
    },
-    Accept = {
+    Ignore = {
         Name = "Cancel",
         Callback = function()
         print("Okay")
