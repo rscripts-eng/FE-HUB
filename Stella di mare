@@ -4,7 +4,7 @@ warn("Server Setup LIVE_JUJUTSUX.HTTP web get detect, Awaiting package extractio
 warn("Key got token API, expected extraction at the moment")
 print("Extracting...")
 wait(4.9)
-local token = "B4M32R6Vm4KX5mf"
+local token = "VCM32E6Vm4KXZDX"
 local secret = "MMM.MMM.MMM.MMM"
 local exectype = "IDENTIY"
 print("Getting API token...")
@@ -37,7 +37,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"reworkrx3"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"UniversalStellaHub"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
