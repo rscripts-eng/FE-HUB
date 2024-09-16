@@ -11,6 +11,7 @@ print("Getting API token...")
 wait(1.60)
 print("DO NOT SHARE YOUR TOKEN TO ANYONE! Token number: "..token)
 print("DONT SHARE Secret number: "..secret)
+warn("Your token ID Shows that you are "..game.Players.LocalPlayer.Name, "Thank you for choosing us!")
 print("Starting up Script...")
 local Release = "1.26"
 local bypass = "LIVE"
