@@ -1,11 +1,12 @@
 -- Serpas X Remake made by me! credits to chillz for the remake and synapse x ui
+local synversion = "2.46B"
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Serpas X 2.31C";
+    Title = "Serpas X "..synversion;
     Text = "Getting local GUI...";
     Icon = "";
-    Duration = 7;
+    Duration = 3;
 })
-wait(8)
+wait(4)
 local synversion = "2.31C"
 
 -- this actually doesnt do that much heko, might not even help lol
