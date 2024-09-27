@@ -177,3 +177,13 @@ humanoid.Died:Connect(function() tc:Disconnect() end)
    -- The function that takes place when the button is pressed
    end,
 })
+local Input = Tab:CreateInput({
+   Name = "Anti mute for chosen one",
+   PlaceholderText = "Text here",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(TextLabel)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(TextLabel, "All")
+   -- The function that takes place when the input is changed
+   -- The variable (Text) is a string for the value in the text box
+   end,
+})
