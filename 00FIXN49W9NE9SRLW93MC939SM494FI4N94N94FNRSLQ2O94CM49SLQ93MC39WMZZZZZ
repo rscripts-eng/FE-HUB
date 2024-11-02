@@ -5,8 +5,6 @@ Sirius
 © 2024 Sirius 
 All Rights Reserved.
 
-Stella sirius is made by sirius themselves, huge credits to them, Thank you.
-
 --]]
 
 
@@ -139,6 +137,14 @@ local siriusValues = {
 			id = 292439477,
 			enabled = true,
 			raw = "PhantomForces",
+			minimumTier = "Pro",
+		},
+		Commander = {
+			name = "Stella commander",
+			description = "Best stella admin scripts for this game, mostly undetected",
+			id = 13278749064, 11137575513, 5950733731,
+			enabled = true,
+			raw = "StellaCommander",
 			minimumTier = "Pro",
 		},
 	},
@@ -4482,6 +4488,9 @@ game.DescendantAdded:Connect(function(instance)
 	end
 end)
 
+for i = 1, 1 do
+	queueNotification("Welcome","Welcome to stella di mare!", 4384400106)
+end
 
 while task.wait(1) do
 	if not checkSirius() then
