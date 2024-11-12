@@ -2,7 +2,7 @@
 local synversion = "1.6"
 game.StarterGui:SetCore("SendNotification", {
     Title = "Stella di mare "..synversion;
-    Text = "This is a synapse X ui, Thank you chillz.";
+    Text = "Getting synapse X ui...";
     Icon = "";
     Duration = 2;
 })
@@ -3075,32 +3075,21 @@ local function C_49()
 		if not injected then
 			title.Text = "Stella di mare - "..synversion.." (checking...)"
 			task.wait(0.8)
-			title.Text = "Stella di mare - "..synversion.." (Attaching API...)"
+			title.Text = "Stella di mare - "..synversion.." (injecting...)"
                         printidentity()
-			task.wait(6.3)
-			title.Text = "Stella di mare - "..synversion.." (Bypassing byfron...)"
-			task.wait(4.2)
-			title.Text = "Stella di mare - "..synversion.." (Making sure that its attached...)"
+			task.wait(2.7)
+			title.Text = "Stella di mare - "..synversion.." (checking...)"
+			task.wait(0.25)
+			title.Text = "Stella di mare - "..synversion.." (readying...)"
 			task.wait(1.3)
-			title.Text = "Stella di mare - "..synversion.." (Ready!)"
+			title.Text = "Stella di mare - "..synversion.." (ready!)"
 			injected = true
 			task.wait(1)
 			title.Text = "Stella di mare - "..synversion
 		else
-			title.Text = "Stella di mare - "..synversion.." (Rebooting...)"
-			task.wait(1)
-			title.Text = "Stella di mare - "..synversion.." (Re-Attaching API...)"
-                        injected = false
-                        printidentity()
-			task.wait(7.4)
-			title.Text = "Stella di mare - "..synversion.." (Rebooting byfron bypass...)"
-			task.wait(5.7)
-			title.Text = "Stella di mare - "..synversion.." (Making sure that its attached...)"
-			task.wait(1.3)
-			title.Text = "Stella di mare - "..synversion.." (Ready!)"
-                        injected = true
-                        task.wait(1)
-			title.Text = "Stella di mare - "..synversion
+                        title.Text = "Stella di mare - "..synversion.." (Already injected!)"
+                        wait(1)
+                        title.Text = "Stella di mare - "synversion
 		end
 	end)
 
