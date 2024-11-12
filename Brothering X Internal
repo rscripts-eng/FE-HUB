@@ -3089,7 +3089,7 @@ local function C_49()
 		else
                         title.Text = "Stella di mare - "..synversion.." (Already injected!)"
                         wait(1)
-                        title.Text = "Stella di mare - "synversion
+                        title.Text = "Stella di mare - "..synversion
 		end
 	end)
 
