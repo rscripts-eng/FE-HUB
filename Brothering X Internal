@@ -2,7 +2,7 @@
 local synversion = "1.6"
 game.StarterGui:SetCore("SendNotification", {
     Title = "Stella di mare "..synversion;
-    Text = "Getting local GUI...";
+    Text = "This is a synapse X ui, Thank you chillz.";
     Icon = "";
     Duration = 2;
 })
