@@ -92,7 +92,7 @@ local siriusValues = {
 	siriusVersion = "1.27",
 	siriusName = "Quantum sirius",
 	releaseType = "Stable",
-	siriusFolder = "Sirius Stella UI",
+	siriusFolder = "Sirius Quantum UI",
 	settingsFile = "settings.srs",
 	interfaceAsset = 14183548964,
 	cdn = "https://cdn.sirius.menu/SIRIUS-SCRIPT-CORE-ASSETS/",
@@ -139,15 +139,6 @@ local siriusValues = {
 			raw = "PhantomForces",
 			minimumTier = "Pro",
 		},
-		Commander = {
-			name = "Stella commander",
-			description = "Best stella admin scripts for this game, mostly undetected",
-			id = 13278749064, 11137575513, 5950733731,
-			enabled = true,
-			raw = "StellaCommander",
-			minimumTier = "Pro",
-		},
-	},
 	rawTree = "https://raw.githubusercontent.com/SiriusSoftwareLtd/Sirius/Sirius/games/",
 	neonModule = "https://raw.githubusercontent.com/shlexware/Sirius/request/library/neon.lua",
 	senseRaw = "https://raw.githubusercontent.com/shlexware/Sirius/request/library/sense/source.lua",
@@ -395,13 +386,13 @@ local siriusValues = {
 local siriusSettings = {
 	{
 		name = 'General',
-		description = 'The general settings for Stella, from simple to unique features.',
+		description = 'The general settings for Quantum, from simple to unique features.',
 		color = Color3.new(0.117647, 0.490196, 0.72549),
 		minimumLicense = 'Free',
 		categorySettings = {
 			{
 				name = 'Anonymous Client',
-				description = 'Randomise your username in real-time in any CoreGui parented interface, including Stella. You will still appear as your actual name to others in-game. This setting can be performance intensive.',
+				description = 'Randomise your username in real-time in any CoreGui parented interface, including Quantum. You will still appear as your actual name to others in-game. This setting can be performance intensive.',
 				settingType = 'Boolean',
 				current = false,
 
@@ -409,7 +400,7 @@ local siriusSettings = {
 			},
 			{
 				name = 'Chat Spy',
-				description = 'This will only work on the legacy Roblox chat system. Stella will display whispers usually hidden from you in the chat box.',
+				description = 'This will only work on the legacy Roblox chat system. Quantum will display whispers usually hidden from you in the chat box.',
 				settingType = 'Boolean',
 				current = true,
 
@@ -425,7 +416,7 @@ local siriusSettings = {
 			},
 			{
 				name = 'Now Playing Notifications',
-				description = 'When active, Stella will notify you when the next song in your Music queue plays.',
+				description = 'When active, Quantum will notify you when the next song in your Music queue plays.',
 				settingType = 'Boolean',
 				current = true,
 
@@ -479,7 +470,7 @@ local siriusSettings = {
 	},
 	{
 		name = 'Keybinds',
-		description = 'Assign keybinds to actions or change keybinds such as the one to open/close Stella.',
+		description = 'Assign keybinds to actions or change keybinds such as the one to open/close Quantum.',
 		color = Color3.new(0.0941176, 0.686275, 0.509804),
 		minimumLicense = 'Free',
 		categorySettings = {
@@ -613,13 +604,13 @@ local siriusSettings = {
 	},
 	{
 		name = 'Performance',
-		description = 'Tweak and test your performance settings for Roblox in Stella.',
+		description = 'Tweak and test your performance settings for Roblox in Quantum.',
 		color = Color3.new(1, 0.376471, 0.168627),
 		minimumLicense = 'Free',
 		categorySettings = {
 			{
 				name = 'Artificial FPS Limit',
-				description = 'Stella will automatically set your FPS to this number when you are tabbed-in to Roblox.',
+				description = 'Quantum will automatically set your FPS to this number when you are tabbed-in to Roblox.',
 				settingType = 'Number',
 				values = {20, 5000},
 				current = 240,
@@ -628,7 +619,7 @@ local siriusSettings = {
 			},
 			{
 				name = 'Limit FPS while unfocused',
-				description = 'Stella will automatically set your FPS to 60 when you tab-out or unfocus from Roblox.',
+				description = 'Quantum will automatically set your FPS to 60 when you tab-out or unfocus from Roblox.',
 				settingType = 'Boolean', -- number for the cap below!! with min and max val
 				current = true,
 
@@ -636,7 +627,7 @@ local siriusSettings = {
 			},
 			{
 				name = 'Adaptive Latency Warning',
-				description = 'Stella will check your average latency in the background and notify you if your current latency significantly goes above your average latency.',
+				description = 'Quantum will check your average latency in the background and notify you if your current latency significantly goes above your average latency.',
 				settingType = 'Boolean',
 				current = true,
 
@@ -644,7 +635,7 @@ local siriusSettings = {
 			},
 			{
 				name = 'Adaptive Performance Warning',
-				description = 'Stella will check your average FPS in the background and notify you if your current FPS goes below a specific number.',
+				description = 'Quantum will check your average FPS in the background and notify you if your current FPS goes below a specific number.',
 				settingType = 'Boolean',
 				current = true,
 
@@ -654,7 +645,7 @@ local siriusSettings = {
 	},
 	{
 		name = 'Detections',
-		description = 'Stella detects and prevents anything malicious or possibly harmful to your wellbeing.',
+		description = 'Quantum detects and prevents anything malicious or possibly harmful to your wellbeing.',
 		color = Color3.new(0.705882, 0, 0),
 		minimumLicense = 'Free',
 		categorySettings = {
@@ -679,7 +670,7 @@ local siriusSettings = {
 			},
 			{
 				name = 'Moderator Detection',
-				description = 'Be notified whenever Stella detects a player joins your session that could be a game moderator.',
+				description = 'Be notified whenever Quantum detects a player joins your session that could be a game moderator.',
 				settingType = 'Boolean', 
 				minimumLicense = 'Pro',
 				current = true,
@@ -1041,7 +1032,7 @@ end)()
 -- Sirius Functions
 local function checkSirius() return UI.Parent end
 local function getPing() return math.clamp(statsService.Network.ServerStatsItem["Data Ping"]:GetValue(), 10, 700) end
-local function checkFolder() if isfolder then if not isfolder(siriusValues.siriusFolder) then makefolder(siriusValues.siriusFolder) end if not isfolder(siriusValues.siriusFolder.."/Music") then makefolder(siriusValues.siriusFolder.."/Music") writefile(siriusValues.siriusFolder.."/Music/readme.txt", "Hey there! Place your MP3 or other audio files in this folder, and have the ability to play them through the Stella Music UI!") end if not isfolder(siriusValues.siriusFolder.."/Assets/Icons") then makefolder(siriusValues.siriusFolder.."/Assets/Icons") end if not isfolder(siriusValues.siriusFolder.."/Assets") then makefolder(siriusValues.siriusFolder.."/Assets") end end end
+local function checkFolder() if isfolder then if not isfolder(siriusValues.siriusFolder) then makefolder(siriusValues.siriusFolder) end if not isfolder(siriusValues.siriusFolder.."/Music") then makefolder(siriusValues.siriusFolder.."/Music") writefile(siriusValues.siriusFolder.."/Music/readme.txt", "Hey there! Place your MP3 or other audio files in this folder, and have the ability to play them through the Quantum Music UI!") end if not isfolder(siriusValues.siriusFolder.."/Assets/Icons") then makefolder(siriusValues.siriusFolder.."/Assets/Icons") end if not isfolder(siriusValues.siriusFolder.."/Assets") then makefolder(siriusValues.siriusFolder.."/Assets") end end end
 local function isPanel(name) return not table.find({"Home", "Music", "Settings"}, name) end
 
 local function fetchFromCDN(path, write, savePath)
@@ -1224,13 +1215,13 @@ end
 
 local function blurSignature(value)
 	if not value then
-		if lighting:FindFirstChild("StellaBlur") then
-			lighting:FindFirstChild("StellaBlur"):Destroy()
+		if lighting:FindFirstChild("QuantumBlur") then
+			lighting:FindFirstChild("QuantumBlur"):Destroy()
 		end
 	else
-		if not lighting:FindFirstChild("StellaBlur") then
+		if not lighting:FindFirstChild("QuantumBlur") then
 			local blurLight = Instance.new("DepthOfFieldEffect", lighting)
-			blurLight.Name = "StellaBlur"
+			blurLight.Name = "QuantumBlur"
 			blurLight.Enabled = true
 			blurLight.FarIntensity = 0
 			blurLight.FocusDistance = 51.6
@@ -1364,7 +1355,7 @@ local function checkLastVersion()
 	local lastVersion = isfile and isfile(siriusValues.siriusFolder.."/".."version.srs") and readfile(siriusValues.siriusFolder.."/".."version.srs") or nil
 
 	if lastVersion then
-		if lastVersion ~= siriusValues.siriusVersion then queueNotification("Stella has been updated", "Quantum has been updated to version "..siriusValues.siriusVersion..", check our Discord for all new features and changes.", 4400701828)  end
+		if lastVersion ~= siriusValues.siriusVersion then queueNotification("Quantum has been updated", "Quantum has been updated to version "..siriusValues.siriusVersion..", check our Discord for all new features and changes.", 4400701828)  end
 	end
 
 	if writefile then writefile(siriusValues.siriusFolder.."/".."version.srs", siriusValues.siriusVersion) end
@@ -1620,7 +1611,7 @@ local function syncExperienceInformation()
 
 			gameDetectionPrompt.Layer.Run.MouseButton1Click:Connect(function()
 				closeGameDetection()
-				queueNotification("Running "..gameFound.name, "Now running Stella' "..gameFound.name.." script, this may take a moment.", 4400701828)
+				queueNotification("Running "..gameFound.name, "Now running Quantum' "..gameFound.name.." script, this may take a moment.", 4400701828)
 				runScript(rawFile)
 
 			end)
@@ -2803,7 +2794,7 @@ if Essential or Pro then
 	getgenv()[index] = function(data)
 		if checkSirius() and checkSetting("Intelligent HTTP Interception").current then
 			local title = "Do you trust this source?"
-			local content = "Stella has prevented data from being sent off-client, would you like to allow data to be sent or retrieved from this source?"
+			local content = "Quantum has prevented data from being sent off-client, would you like to allow data to be sent or retrieved from this source?"
 			local url = data.Url or "Unknown Link"
 			local gradient = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0, 0, 0)),ColorSequenceKeypoint.new(1, Color3.new(0.764706, 0.305882, 0.0941176))})
 			local actions = {{"Always Allow", true, true}, {"Allow just this once", true}, {"Don't Allow", false}}
@@ -2813,7 +2804,7 @@ if Essential or Pro then
 
 				if bodyDecoded.cmd == "INVITE_BROWSER" then
 					title = "Would you like to join this Discord server?"
-					content = "Stella has prevented your Discord client from automatically joining this Discord server, would you like to continue and join, or block it?"
+					content = "Quantum has prevented your Discord client from automatically joining this Discord server, would you like to continue and join, or block it?"
 					url = bodyDecoded.args and "discord.gg/"..bodyDecoded.args.code or "Unknown Invite"
 					gradient = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0, 0, 0)),ColorSequenceKeypoint.new(1, Color3.new(0.345098, 0.396078, 0.94902))})
 					actions = {{"Allow", true}, {"Don't Allow", false}}
@@ -2836,7 +2827,7 @@ if Essential or Pro then
 	getgenv()[indexSetClipboard] = function(data)
 		if checkSirius() and checkSetting("Intelligent Clipboard Interception").current then
 			local title = "Would you like to copy this to your clipboard?"
-			local content = "Stella has prevented a script from setting the below text to your clipboard, would you like to allow this, or prevent it from copying?"
+			local content = "Quantum has prevented a script from setting the below text to your clipboard, would you like to allow this, or prevent it from copying?"
 			local url = data or "Unknown Clipboard"
 			local gradient = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0, 0, 0)),ColorSequenceKeypoint.new(1, Color3.new(0.776471, 0.611765, 0.529412))})
 			local actions = {{"Allow", true}, {"Don't Allow", false}}
@@ -3053,7 +3044,7 @@ local function onChatted(player, message)
 		get:Disconnect()
 
 		if hidden and enabled then
-			chatSpyVisuals.Text = "Sirius stella spy - [".. player.Name .."]: "..message2
+			chatSpyVisuals.Text = "Sirius Quantum spy - [".. player.Name .."]: "..message2
 			starterGui:SetCore("ChatMakeSystemMessage", chatSpyVisuals)
 		end
 	end
@@ -3758,7 +3749,7 @@ local function initialiseAntiKick()
 
 			originalIndex = hookmetamethod(game, "__index", function(self, method)
 				if self == localPlayer and method:lower() == "kick" and checkSetting("Client-Based Anti Kick").current and checkSirius() then
-					queueNotification("Kick Prevented", "Stella has prevented you from being kicked by the client.", 4400699701)
+					queueNotification("Kick Prevented", "Quantum has prevented you from being kicked by the client.", 4400699701)
 					return error("Expected ':' not '.' calling member function Kick", 2)
 				end
 				return originalIndex(self, method)
@@ -3766,7 +3757,7 @@ local function initialiseAntiKick()
 
 			originalNamecall = hookmetamethod(game, "__namecall", function(self, ...)
 				if self == localPlayer and getnamecallmethod():lower() == "kick" and checkSetting("Client-Based Anti Kick").current and checkSirius() then
-					queueNotification("Kick Prevented", "Stella has prevented you from being kicked by the client.", 4400699701)
+					queueNotification("Kick Prevented", "Quantum has prevented you from being kicked by the client.", 4400699701)
 					return
 				end
 				return originalNamecall(self, ...)
@@ -3822,7 +3813,7 @@ local function start()
 	end
 
 	if script_key and not Essential and not Pro then
-		queueNotification("License Error", "We've detected a key being placed above Stella's loadstring, however your key seems to be invalid. Make a support request at our discord to get this solved within minutes.", "document-stella")
+		queueNotification("License Error", "We've detected a key being placed above Quantum's loadstring, however your key seems to be invalid. Make a support request at our discord to get this solved within minutes.", "document-Quantum")
 	end
 
 	if siriusValues.enableExperienceSync then
@@ -3961,8 +3952,8 @@ end)
 
 homeContainer.Interactions.Discord.Interact.MouseButton1Click:Connect(function()
 	if setclipboard then 
-		originalSetClipboard("https://discord.gg/55YtH6JXNx")
-		queueNotification("Discord Invite Copied", "We've set your clipboard to the Stella discord invite.", 4335479121)
+		originalSetClipboard("https://t.me/+Ge_k8G6I2YEwZWJk")
+		queueNotification("Telegram copied", "We've set your clipboard to the Quantum telegram invite.", 4335479121)
 	else
 		queueNotification("Unable to copy Discord invite", "Missing setclipboard() function, can't set data to your clipboard.", 4335479658)
 	end
