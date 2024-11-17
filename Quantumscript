@@ -90,7 +90,7 @@ local oldVolume = gameSettings.MasterVolume
 -- Configurable Core Values
 local siriusValues = {
 	siriusVersion = "1.27",
-	siriusName = "Stella di mare sirius",
+	siriusName = "Quantum sirius",
 	releaseType = "Stable",
 	siriusFolder = "Sirius Stella UI",
 	settingsFile = "settings.srs",
@@ -462,7 +462,7 @@ local siriusSettings = {
 			},
 			{
 				name = 'Client-Based Anti Kick',
-				description = 'Cancel any kick request involving you sent by the client. This may prompt detection from Adonis or similar anti-cheats. You will need to rejoin and re-run Stella di mare to toggle.',
+				description = 'Cancel any kick request involving you sent by the client. This may prompt detection from Adonis or similar anti-cheats. You will need to rejoin and re-run Quantum to toggle.',
 				settingType = 'Boolean',
 				current = false,
 
@@ -1364,7 +1364,7 @@ local function checkLastVersion()
 	local lastVersion = isfile and isfile(siriusValues.siriusFolder.."/".."version.srs") and readfile(siriusValues.siriusFolder.."/".."version.srs") or nil
 
 	if lastVersion then
-		if lastVersion ~= siriusValues.siriusVersion then queueNotification("Stella has been updated", "Stella di mare has been updated to version "..siriusValues.siriusVersion..", check our Discord for all new features and changes.", 4400701828)  end
+		if lastVersion ~= siriusValues.siriusVersion then queueNotification("Stella has been updated", "Quantum has been updated to version "..siriusValues.siriusVersion..", check our Discord for all new features and changes.", 4400701828)  end
 	end
 
 	if writefile then writefile(siriusValues.siriusFolder.."/".."version.srs", siriusValues.siriusVersion) end
@@ -1744,7 +1744,7 @@ local function sortActions()
 			end)
 
 			if not success then
-				queueNotification("Action Error", "This action ('"..(action.name).."') had an error while running, please report this to the Stella di mare stereo team on our discord", 4370336704)
+				queueNotification("Action Error", "This action ('"..(action.name).."') had an error while running, please report this to the Quantum stereo team on our discord", 4370336704)
 				action.enabled = false
 				newAction.Icon.Image = "rbxassetid://"..action.images[2]
 				tweenService:Create(newAction, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.55}):Play()
@@ -4489,7 +4489,7 @@ game.DescendantAdded:Connect(function(instance)
 end)
 
 for i = 1, 1 do
-	queueNotification("Welcome","Welcome to stella di mare!", 4384400106)
+	queueNotification("Welcome","Welcome to Quantum!", 4384400106)
 end
 
 while task.wait(1) do
