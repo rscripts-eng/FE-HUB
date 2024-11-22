@@ -139,6 +139,15 @@ local siriusValues = {
 			raw = "PhantomForces",
 			minimumTier = "Pro",
 		},
+		Commander = {
+			name = "Quantum commander",
+			description = "Best Quantum admin scripts for this game, mostly undetected",
+			id = 13278749064, 11137575513, 5950733731,
+			enabled = true,
+			raw = "QuantumCommander",
+			minimumTier = "Pro",
+		},
+	},
 	rawTree = "https://raw.githubusercontent.com/SiriusSoftwareLtd/Sirius/Sirius/games/",
 	neonModule = "https://raw.githubusercontent.com/shlexware/Sirius/request/library/neon.lua",
 	senseRaw = "https://raw.githubusercontent.com/shlexware/Sirius/request/library/sense/source.lua",
@@ -3952,8 +3961,8 @@ end)
 
 homeContainer.Interactions.Discord.Interact.MouseButton1Click:Connect(function()
 	if setclipboard then 
-		originalSetClipboard("https://t.me/+Ge_k8G6I2YEwZWJk")
-		queueNotification("Telegram copied", "We've set your clipboard to the Quantum telegram invite.", 4335479121)
+		originalSetClipboard("https://discord.gg/55YtH6JXNx")
+		queueNotification("Discord Invite Copied", "We've set your clipboard to the Quantum discord invite.", 4335479121)
 	else
 		queueNotification("Unable to copy Discord invite", "Missing setclipboard() function, can't set data to your clipboard.", 4335479658)
 	end
